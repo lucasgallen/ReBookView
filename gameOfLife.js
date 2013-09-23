@@ -1,5 +1,8 @@
 function Life($scope,$timeout) {
 
+	
+	// Constructor for the cell object
+	// represented by each gray square div
 	function Cell(isAlive,numNghb) {
 		this.isAlive = isAlive;
 		this.numNghb = numNghb;
@@ -15,50 +18,57 @@ function Life($scope,$timeout) {
 		return arr;
 	}
 
-	
 
-	$scope.cells = createCells(20);
+	// Shorthand for number of rows
+	// and columns to make easy changes
+	// if neccessary
+	var numRows = 20;
+	var numColumns = 20;
+	
+	// Initializer for the 2D array
+	// of cells
+	$scope.cells = createCells(numRows);
 
 	// To be used in preserving current
 	// generation of cells
-	var nextGen = createCells(20);		
+	var nextGen = createCells(numRows);		
 										
 
 	// This is the initializer									
 	// for the crntgen of cells									
-	for (i=0;i<20;i++)							
-		for(j=0;j<20;j++)						
+	for (i=0;i<numRows;i++)							
+		for(j=0;j<numColumns;j++)						
 			$scope.cells[i][j] = new Cell(false,0);
 
 	// This is the initializer
 	// for the nextgen of cells
-	for (i=0;i<20;i++)							
-		for(j=0;j<20;j++)						
+	for (i=0;i<numRows;i++)							
+		for(j=0;j<numColumns;j++)						
 			nextGen[i][j] = new Cell(false,0);
 
 
 	//do {
 	$scope.playSimulation = function () {  
 		// Neighbor counter
-		for (i=0;i<20;i++)							
-			for(j=0;j<20;j++)
+		for (i=0;i<numRows;i++)							
+			for(j=0;j<numColumns;j++)
 			{
 				var tempNghb = 0;
 				if (i-1>=0){
 					if ($scope.cells[i-1][j].isAlive)
 						tempNghb++;
-					if (j+1<20)
+					if (j+1<numColumns)
 						if ($scope.cells[i-1][j+1].isAlive)
 							tempNghb++;
-					}
-				if (j+1<20){
+				}
+				if (j+1<numColumns){
 					if ($scope.cells[i][j+1].isAlive)
 						tempNghb++;
-					if (i+1<20)
+					if (i+1<numRows)
 						if ($scope.cells[i+1][j+1].isAlive)
 							tempNghb++;
 					}
-				if (i+1<20)	{
+				if (i+1<numRows)	{
 					if ($scope.cells[i+1][j].isAlive)
 						tempNghb++;
 					if (j-1>=0)
@@ -79,8 +89,8 @@ function Life($scope,$timeout) {
 		// Checks the life-state of the current generation
 		// against the rules to determine the		
 		// life-state of the nextgen	
-		for (i=0;i<20;i++)							
-			for(j=0;j<20;j++)						 
+		for (i=0;i<numRows;i++)							
+			for(j=0;j<numColumns;j++)						 
 			{											
 				if ($scope.cells[i][j].isAlive) {
 					if ($scope.cells[i][j].numNghb === 2 || $scope.cells[i][j].numNghb === 3)
@@ -98,8 +108,8 @@ function Life($scope,$timeout) {
 		// Assigns the life-states for the	
 		// view	from the "next generation" 
 		// to the "current generation"
-		for (i=0;i<20;i++)							
-			for(j=0;j<20;j++)						
+		for (i=0;i<numRows;i++)							
+			for(j=0;j<numColumns;j++)						
 				$scope.cells[i][j].isAlive = nextGen[i][j].isAlive;
 	}
 	//}while(false)
