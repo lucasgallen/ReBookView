@@ -57,31 +57,79 @@ function Life($scope,$timeout) {
 				if (i-1>=0){
 					if ($scope.cells[i-1][j].isAlive)
 						tempNghb++;
-					if (j+1<numColumns)
+					if (j+1<numColumns){
 						if ($scope.cells[i-1][j+1].isAlive)
+							tempNghb++;
+					}else
+						if ($scope.cells[i-1][0].isAlive)
+							tempNghb++;
+				}else{
+					if ($scope.cells[numRows-1][j].isAlive)
+						tempNghb++;
+					if (j+1<numColumns){
+						if ($scope.cells[numRows-1][j+1].isAlive)
+							tempNghb++;
+					}else
+						if ($scope.cells[numRows-1][0].isAlive)
 							tempNghb++;
 				}
 				if (j+1<numColumns){
 					if ($scope.cells[i][j+1].isAlive)
 						tempNghb++;
-					if (i+1<numRows)
+					if (i+1<numRows){
 						if ($scope.cells[i+1][j+1].isAlive)
 							tempNghb++;
-					}
+					}else
+						if ($scope.cells[0][j+1].isAlive)
+							tempNghb++;
+				}else{
+					if ($scope.cells[i][0].isAlive)
+						tempNghb++;
+					if (i+1<numRows){
+						if ($scope.cells[i+1][0].isAlive)
+							tempNghb++;
+					}else
+						if ($scope.cells[0][0].isAlive)
+							tempNghb++;
+				}
 				if (i+1<numRows)	{
 					if ($scope.cells[i+1][j].isAlive)
 						tempNghb++;
-					if (j-1>=0)
+					if (j-1>=0){
 						if ($scope.cells[i+1][j-1].isAlive)
 							tempNghb++;
-					}
+					}else
+						if ($scope.cells[i+1][numColumns-1].isAlive)
+							tempNghb++;
+				}else{
+					if ($scope.cells[0][j].isAlive)
+						tempNghb++;
+					if (j-1>=0){
+						if ($scope.cells[0][j-1].isAlive)
+							tempNghb++;
+					}else
+						if ($scope.cells[0][numColumns-1].isAlive)
+							tempNghb++;
+				}
 				if (j-1>=0)	{
 					if ($scope.cells[i][j-1].isAlive)
 						tempNghb++;
-					if (i-1>=0)
+					if (i-1>=0){
 						if ($scope.cells[i-1][j-1].isAlive)
 							tempNghb++;
-					}
+					}else
+						if ($scope.cells[numRows-1][j-1].isAlive)
+							tempNghb++;
+				}else{
+					if ($scope.cells[i][numColumns-1].isAlive)
+						tempNghb++;
+					if (i-1>=0){
+						if ($scope.cells[i-1][numColumns-1].isAlive)
+							tempNghb++;
+					}else
+						if ($scope.cells[numRows-1][numColumns-1].isAlive)
+							tempNghb++;
+				}
 				$scope.cells[i][j].numNghb = tempNghb;
 			}
 
