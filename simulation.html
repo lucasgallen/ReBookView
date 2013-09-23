@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+
+	<link rel="stylesheet" type="text/css" href="simulationstylesheet.css">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+<head>
+
+	<title>Simulations!</title>
+	<script type="text/javascript" src="gameOfLife.js"></script>
+
+</head>
+
+<body ng-app>
+
+	<h1 id="title"> Conway's Game of Life </h1>
+
+	<script type="text/javascript" src="angular.js"></script>
+
+	<div id="fence" ng-controller="Life">
+		{{numberOfSteps}}
+		<div class="grid" ng-model="cells">
+			<span ng-repeat="row in cells">
+				<span ng-repeat="cell in row">
+					<div 
+					ng-if="cells[$parent.$index][$index].isAlive" 
+					class="grid" 
+					id="row_alive"
+					ng-click="cells[$parent.$parent.$index][$parent.$index].isAlive=!cells[$parent.$parent.$index][$parent.$index].isAlive">
+					</div>
+					<div 
+					ng-if="!cells[$parent.$index][$index].isAlive" 
+					class="grid" 
+					id="row"
+					ng-click="cells[$parent.$parent.$index][$parent.$index].isAlive=!cells[$parent.$parent.$index][$parent.$index].isAlive">
+					</div>
+				</span>
+			</span>
+		</div>
+
+		
+		<button ng-click="lifeStep()">
+			<i class="icon-step-forward"></i>
+		</button>
+		<button ng-click="playLifeButton()" style="float:right">
+			<i class="icon-play"><i>
+		</button>
+	</div>
+
+
+
+</body>
+
+</html>

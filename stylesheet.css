@@ -1,0 +1,89 @@
+html, body {
+	background-image: url('sprinkles.png');
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	margin-top: 0px;
+	margin-left: 0px;
+}
+
+a {
+	text-decoration: none;
+}
+a:hover {
+	color:black;
+	text-shadow: 2px 2px 2px white;
+}
+#topimg {
+	position: fixed;
+	height: 200px;
+	width:100%;
+}
+
+#banner {
+	height: 50px;
+	width: 100%;
+	background-color: black;
+
+	position: fixed;
+	top: 200px;
+	box-shadow: 2px 2px 6px black;
+}
+
+#banner img {
+	position: absolute;
+	height: 100%;
+	width: 7%;
+}
+
+
+.menu {
+	position: relative;
+	color: white;
+	font-family: Arial Black;
+	text-align: center;
+}
+.menu div {
+	display: inline-block;
+}
+#proj {
+	
+}
+.home {
+	margin-left: 100px;
+	margin-right: 100px;
+}
+#glow {
+	color:black;
+	text-shadow: 2px 2px 2px white;
+}
+
+#tall {
+	background-color: #ffffff;
+	height: auto;
+	width: 80%;
+	margin-right: 10%;
+	margin-left: 10%;
+}
+
+#tall div{
+	margin-right: 10%;
+	margin-left: 10%;
+	padding-top: 350px;
+	text-align: justify;
+	text-indent: 10px;
+	height: 100%;
+	font-family: Helvetica, sans-serif;
+}
+
+#tall div p{
+	color: #555555;
+}
+#bot{
+	text-indent: 0px;
+	margin-top: 200px;
+	margin-left: 10px;
+	margin-right: 10px;
+}

@@ -1,0 +1,41 @@
+html {
+	background-image: url('binding_dark.png');
+}
+
+#title {
+	text-align: center;
+	color: white;
+	font-weight: 100;
+	font-family: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+	text-shadow: 0px 0px 20px #979797;
+}
+
+#fence {
+	display: inline-block;
+	margin-right: 30%;
+	margin-left: 30%;
+}
+.grid {
+	width:420px;
+	height:420px;
+	background-color: black;
+}
+
+#row {
+	float: left;
+	background-color: gray;
+	width: 16px;
+	height: 16px;
+	margin: 2.5px 2.5px 2.5px 2.5px;
+}
+#row_alive {
+	float: left;
+	background-color: white;
+	width: 16px;
+	height: 16px;
+	margin: 2.5px 2.5px 2.5px 2.5px;
+}
+
+button {
+	display: inline-block;
+}
