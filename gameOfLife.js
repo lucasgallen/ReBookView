@@ -9,7 +9,8 @@ function Life($scope,$timeout) {
 	}
 
 
-	// Neccessary to create 2D array
+	// Neccessary to initiate 2D array
+	// for our grid of cells
 	function createCells(rows) {			
 		var arr = [];
 		for (i=0;i<rows;i++)
@@ -23,7 +24,7 @@ function Life($scope,$timeout) {
 	// and columns to make easy changes
 	// if neccessary
 	var numRows = 20;
-	var numColumns = 20;
+	var numColumns = 30;
 	
 	// Initializer for the 2D array
 	// of cells
@@ -47,9 +48,11 @@ function Life($scope,$timeout) {
 			nextGen[i][j] = new Cell(false,0);
 
 
-	//do {
 	$scope.playSimulation = function () {  
-		// Neighbor counter
+		// Here the function goes through each cell
+		// and checks that cell's neighbors (diagonals inclusive)
+		// Note how if the check is asking for a cell out 
+		// of bounds, it checks the cell on the opposite wall
 		for (i=0;i<numRows;i++)							
 			for(j=0;j<numColumns;j++)
 			{
@@ -135,8 +138,8 @@ function Life($scope,$timeout) {
 
 
 		// Checks the life-state of the current generation
-		// against the rules to determine the		
-		// life-state of the nextgen	
+		// against the rules to determine the life-state of		
+		// the next generation, using number of neighbors
 		for (i=0;i<numRows;i++)							
 			for(j=0;j<numColumns;j++)						 
 			{											
@@ -153,15 +156,17 @@ function Life($scope,$timeout) {
 			}
 
 
-		// Assigns the life-states for the	
-		// view	from the "next generation" 
-		// to the "current generation"
+		// Assigns the life-states for the view	from 	
+		// the "next generation" to the "current generation"
+		// Updating after the neighbor count prevents the function
+		// from losing the data on the current generation
 		for (i=0;i<numRows;i++)							
 			for(j=0;j<numColumns;j++)						
 				$scope.cells[i][j].isAlive = nextGen[i][j].isAlive;
 	}
-	//}while(false)
 
+	// Bound to the "step forward" button
+	// and makes a single call to our simulation
 	$scope.lifeStep = function () {
 		$scope.playSimulation();
 	}
@@ -169,6 +174,9 @@ function Life($scope,$timeout) {
 	var stop;
 	$scope.play = false;
 
+	// Using $timeout and "stop" this function
+	// calls our simulation function until the
+	// "$scope.play" is false.
 	$scope.playLife = function() {
 		stop = $timeout(function(){
 			if ($scope.play === true) {
@@ -180,6 +188,9 @@ function Life($scope,$timeout) {
 		}, 300);
 	};
 
+	// Bound to the "Play/Pause" button and 
+	// changes the state of "$scope.play" each
+	// time the button is clicked
 	$scope.playLifeButton = function() {
 		$scope.play = !$scope.play;
 		$scope.playLife();

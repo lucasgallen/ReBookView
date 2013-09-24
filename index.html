@@ -9,50 +9,42 @@
 </head>
 
 <body>
-	<script type="text/javascript" src="angular.js"></script>	
-	<script type="text/javascript" src="processing.js"></script>
+
 	<img id='topimg' src="bbridge.jpg"/>
-	<div ng-app id='banner'>
-		<img src="logo.png"/>
-		<h1 class="menu">
-			<div ng-model="hoverleft" ng-Mouseenter="hoverleft=true" ng-Mouseleave="hoverleft=false" ng-init="hoverleft=false">
-				<span ng-if="hoverleft" id="glow">
-					<a href="simulation.html">SIMULATIONS</a>
-				</span>
-				<span ng-if="!hoverleft">SIMULATIONS</span>
-			</div>
-
-			<div ng-model="hovermid" ng-Mouseenter="hovermid=true" ng-Mouseleave="hovermid=false" ng-init="hovermid=false">
-				<span ng-if="hovermid" id="glow" class="home">BANNER</span>
-				<span ng-if="!hovermid" class="home">BANNER</span>
-			</div>
-
-			<div ng-model="hoverright" ng-Mouseenter="hoverright=true" ng-Mouseleave="hoverright=false" ng-init="hoverright=false">
-				<span ng-if="hoverright" id="glow">
-					<a href="projects.html">PROJECTS</a>
-				</span>
-				<span ng-if="!hoverright">PROJECTS</span>
-			</div>
-
-			
-		</h1>
-
+	<div id="who">
+		lucas.g.allen
 	</div>
+
+	<div id='banner'>
+		<h1 class="menu" id="glow">
+			<a href="simulation.html" id="sim">Conway's Game of Life</a>
+			<a href="busker.html" id="busk">Busker</a>
+		</h1>
+	</div>
+
 	<div id='tall'>
-		<div><p>
+
+		<div>
+			<h2> About Me </h2>
+			<p>
 				As I completed my graduate study of mathematics, I discovered a passion for programming. Indeed, programming is a subject of analytic promise and creativity (not unlike mathematics) with all the hands-on qualities that is absent in maths. I've always enjoyed tinkering and creating tools that directly impact day-to-day life. Despite the rich, metaphysical elements of mathematics used to create tools for scientists, I'm more interested in creation that is accessible to a greater audience. 
 			</p>
-
 			<p>
-				For now, I am committed to design this website to present my coding skills and provide some examples of interesting and interactive webapps.
+				Now that I'm a graduated masters student, I plan to spend my newfound free time on developing this site and growing a portfolio. Ideally, in the future I will find employment as a software developer and start a career. In the meantime, I look forward to doing some freelance web developement.
 			</p>
-			
-			<p id="bot">
-				If you like what I've done with the site and you'd like me to build a site for you, send me an email and we can talk business.
+			<h2> Progress </h2>
+			<p>
+				Since I'm a graduated masters student, I've found that I have plenty of free time to work on some of the webapp ideas that have been lurking around my cranium.
+			</p>
+			<p>
+				At this point in developement, I have only completed Conway's Game of Life (which you will find in the <a href="simulation.html">Simulations</a> section). I plan to add another app in the future to illustrate my skills in back-end developement and perhaps some knowledge of machine learning, codenamed "Busker".
 			</p>
 
 		</div>
+		
+		<div id="email"> email me: lucas.g.allen@gmail.com </div>
 	</div>
+
 </body>
 
 </html>

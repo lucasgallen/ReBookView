@@ -1,5 +1,5 @@
 html, body {
-	background-image: url('sprinkles.png');
+	background-image: url('binding_dark.png');
 	height: 100%;
 	width: 100%;
 }
@@ -9,41 +9,55 @@ body {
 	margin-left: 0px;
 }
 
-a {
+a,:link,:visited {
 	text-decoration: none;
+	color: white;
+	font-weight: 100px;
 }
 a:hover {
 	color:black;
-	text-shadow: 2px 2px 2px white;
+	text-shadow: 0px 0px 10px white;
 }
+
+
 #topimg {
 	position: fixed;
 	height: 200px;
-	width:100%;
+	width: 100%;
+	z-index: 1;
+}
+#who {
+	position: fixed;
+	color: white;
+	z-index: 3;
+	font-size: 30px;
+	margin-top: 75px;
+	margin-left: 650px;
+	text-shadow: 0px 0px 10px white;
 }
 
 #banner {
 	height: 50px;
 	width: 100%;
-	background-color: black;
-
+	background-image: url('binding_dark.png');
 	position: fixed;
 	top: 200px;
 	box-shadow: 2px 2px 6px black;
 }
 
-#banner img {
-	position: absolute;
-	height: 100%;
-	width: 7%;
-}
-
 
 .menu {
 	position: relative;
-	color: white;
-	font-family: Arial Black;
-	text-align: center;
+	font-weight: 100;
+	font-family: Arial;
+}
+#sim {
+	margin-left: 60px;
+	margin-top: 25px;
+}
+#busk {
+	float: right;
+	margin-right: 120px;
 }
 .menu div {
 	display: inline-block;
@@ -57,29 +71,41 @@ a:hover {
 }
 #glow {
 	color:black;
-	text-shadow: 2px 2px 2px white;
+	text-shadow: 0px 0px 10px white;
 }
 
 #tall {
 	background-color: #ffffff;
 	height: auto;
-	width: 80%;
-	margin-right: 10%;
-	margin-left: 10%;
+	width: 70%;
+	margin-right: 15%;
+	margin-left: 15%;
+	border-style: inset;
+	border-color: black;
+	border-width: 3px;
 }
-
+#email {
+	color: black;
+	text-indent: 0px;
+}
 #tall div{
-	margin-right: 10%;
-	margin-left: 10%;
-	padding-top: 350px;
+	margin-right: 5%;
+	margin-left: 5%;
+	padding-top: 260px;
 	text-align: justify;
 	text-indent: 10px;
 	height: 100%;
 	font-family: Helvetica, sans-serif;
 }
+#tall div h2 {
+	text-align: center;
+}
 
 #tall div p{
 	color: #555555;
+}
+#tall div p a {
+	color: black;
 }
 #bot{
 	text-indent: 0px;
