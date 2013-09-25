@@ -6,35 +6,38 @@
 <head>
 
 	<title>Simulations!</title>
+	<link rel="icon" type="image/png" href="icon.png">
 	<script type="text/javascript" src="gameOfLife.js"></script>
 
 </head>
 
 <body ng-app>
-	 
-	<a href="index.html">
-		<button id="homeButton"> 
-			Home 
-		</button>
-	</a>
-
-	<div id="leftsidebar" class="sidebar">
-
-		<p>The grey squares designate "dead" cells and white squares designate "alive" cells.</p>
-		<p>Note, although the grid appears as a square, as far as the cells are concerned the grid is a torus (think the surface of a donut). This structure may be familiar to those who have played Astroids. </p>
-
-		Click the grey squares to get started! 
-	</div>
-
-	<div id="rightsidebar" class="sidebar">
-		<p>Press the play button below to let the game run continuously; pressing it again pauses the simulation.</p> 
-		<p>The step forward button on the left simulates one generation of cells at a time.</p>
-		<p>Note the simulation is trivial unless you start with some assortment of living cells. Try to put them near each other to find interesting patterns!</p>
-	</div>
 
 	<script type="text/javascript" src="angular.js"></script>
 
 	<div id="fence" ng-controller="Life">
+
+		<div id="buttonblock">
+			<a href="index.html">
+				<button id="homeButton"> 
+					Home 
+				</button>
+			</a>
+		</div>
+
+		<div id="leftsidebar" class="sidebar">
+
+			<p>The grey squares designate "dead" cells and white squares designate "alive" cells.</p>
+			<p>Note, although the grid appears as a square, as far as the cells are concerned the grid is a torus (think the surface of a donut). This structure may be familiar to those who have played Astroids. </p>
+
+			Click the grey squares to get started! 
+		</div>
+
+		<div id="rightsidebar" class="sidebar">
+			<p>Press the play button below to let the game run continuously; pressing it again pauses the simulation.</p> 
+			<p>The step forward button on the left simulates one generation of cells at a time.</p>
+			<p>Note the simulation is trivial unless you start with some assortment of living cells. Try to put them near each other to find interesting patterns!</p>
+		</div>
 	<h1 id="title"> Conway's Game of Life </h1>
 		<div class="grid" ng-model="cells">
 			<span 
@@ -68,32 +71,35 @@
 		<button ng-click="playLifeButton()" style="float:right">
 			<i class="icon-pause"></i> <i class="icon-play"></i>
 		</button>
+
+		<div id="first_summary">
+			<p>
+				Conway's Game of Life is a simulation that operates on four very simple rules:
+				<ul>
+					<li>
+						If the cell is alive and if the cell has either two or three neighbors, then the cell lives to the next generation.
+					</li>
+					<li>
+						If the cell is alive and the cell only has one or fewer neighbors, then the cell dies.
+					</li>
+					<li>
+						If the cell is alive and the cell has four or more neighbors, then the cell dies.
+					</li>
+					<li>
+						If the cell is dead and the cell has exactly three neighbros, then the cell is born into the next generation.
+					</li>
+				</ul>
+			</p>
+			<p>
+				Here we consider a "neighbor" to be a living cell that is adjacent (including diagonally so) to the cell in question.
+			</p>
+			<p>
+				Conway's Game is interesting because of how complex the simulation can get with a comparatively simple set of rules. To me this is has much to do with the mystery of life and the "ghost in the shell"; it's a clue to the question, "what is consciousness?" Before I get a bit too philosophical here, check out the work of <a href="http://en.wikipedia.org/wiki/Douglas_Hofstadter#Books">Douglas Hofstadter</a>. In particular, <i>I Am a Strange Loop</i> and <i>G&#246;del, Escher, Bach: an Eternal Golden Braid</i> are of interest here.
+		</div>
 	</div>
 
-	<div id="first_summary">
-		<p>
-			Conway's Game of Life is a simulation that operates on four very simple rules:
-			<ul>
-				<li>
-					If the cell is alive and if the cell has either two or three neighbors, then the cell lives to the next generation.
-				</li>
-				<li>
-					If the cell is alive and the cell only has one or fewer neighbors, then the cell dies.
-				</li>
-				<li>
-					If the cell is alive and the cell has four or more neighbors, then the cell dies.
-				</li>
-				<li>
-					If the cell is dead and the cell has exactly three neighbros, then the cell is born into the next generation.
-				</li>
-			</ul>
-		</p>
-		<p>
-			Here we consider a "neighbor" to be a living cell that is adjacent (including diagonally so) to the cell in question.
-		</p>
-		<p>
-			Conway's Game is interesting because of how complex the simulation can get with a comparatively simple set of rules. To me this is has much to do with the mystery of life and the "ghost in the shell"; it's a clue to the question, "what is consciousness?" Before I get a bit too philosophical here, check out the work of <a href="http://en.wikipedia.org/wiki/Douglas_Hofstadter#Books">Douglas Hofstadter</a>. In particular, <i>I Am a Strange Loop</i> and <i>G&#246;del, Escher, Bach: an Eternal Golden Braid</i> are of interest here.
-	</div>
+		
+
 
 
 
