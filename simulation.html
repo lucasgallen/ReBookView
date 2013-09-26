@@ -26,17 +26,18 @@
 		</div>
 
 		<div id="leftsidebar" class="sidebar">
-
-			<p>The grey squares designate "dead" cells and white squares designate "alive" cells.</p>
-			<p>Note, although the grid appears as a square, as far as the cells are concerned the grid is a torus (think the surface of a donut). This structure may be familiar to those who have played Astroids. </p>
-
-			Click the grey squares to get started! 
-		</div>
-
-		<div id="rightsidebar" class="sidebar">
 			<p>Press the play button below to let the game run continuously; pressing it again pauses the simulation.</p> 
 			<p>The step forward button on the left simulates one generation of cells at a time.</p>
 			<p>Note the simulation is trivial unless you start with some assortment of living cells. Try to put them near each other to find interesting patterns!</p>
+			
+		</div>
+
+		<div id="rightsidebar" class="sidebar">
+			<p>The grey squares designate "dead" cells and white squares designate "alive" cells.</p>
+			<p>Note, although the grid appears as a square, as far as the cells are concerned the grid is a torus (think the surface of a donut). This structure may be familiar to those who have played Astroids. </p>
+			<p>If you're not certain which cells to activate or bring to life, try out the shuffle button!</p>
+			Click the grey squares to get started!
+			
 		</div>
 	<h1 id="title"> Conway's Game of Life </h1>
 		<div class="grid" ng-model="cells">
@@ -65,10 +66,13 @@
 		</div>
 
 		
-		<button ng-click="lifeStep()">
+		<button ng-click="lifeStep()" id="leftButton">
 			<i class="icon-step-forward"></i>
 		</button>
-		<button ng-click="playLifeButton()" style="float:right">
+		<button ng-click="randomize()" id="randButton">
+			<i class="icon-random"></i>
+		</button>
+		<button ng-click="playLifeButton()" id="rightButton">
 			<i class="icon-pause"></i> <i class="icon-play"></i>
 		</button>
 

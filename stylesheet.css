@@ -86,7 +86,10 @@ a:hover {
 }
 #email {
 	color: black;
-	text-indent: 0px;
+	text-align: center;
+	background-color: white;
+	margin-right: auto;
+	margin-left: auto;
 }
 #tall div{
 	margin-right: 5%;

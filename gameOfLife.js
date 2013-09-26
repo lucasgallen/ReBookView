@@ -196,6 +196,15 @@ function Life($scope,$timeout) {
 		$scope.playLife();
 	};
 
+	$scope.randomize = function () {
+		for (i=0;i<numRows;i++)
+			for(j=0;j<numColumns;j++)
+				if (Math.random()>=0.5) {
+					$scope.cells[i][j].isAlive = true;
+				}else
+					$scope.cells[i][j].isAlive = false;
+	}
+
 
 
 

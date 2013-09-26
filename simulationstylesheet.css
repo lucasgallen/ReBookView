@@ -74,9 +74,19 @@ button {
 	border-radius: 100%;
 	width: 50px;
 	height: 50px;
-	margin-right: 225px;
-	margin-left: 225px;
 	background-color: black;
+}
+#leftButton {
+	margin-left: 220px;
+	float: left;
+}
+#randButton {
+	margin-right: auto;
+	margin-left: auto;
+}
+#rightButton {
+	margin-right: 220px;
+	float: right;
 }
 
 button:hover {
