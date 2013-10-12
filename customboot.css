@@ -1,0 +1,64 @@
+
+
+p, span, li {font-family: 'Open Sans', sans serif;}
+
+.navbar-fixed-top {
+	border-radius: 4px;	
+}
+
+body, html {
+	height: 100%;
+	background-color: #181717;
+}
+
+#green{color:#238E23;}
+#yellow{color:#FF9F00;}
+#blue{color:#3299CC;}
+#red{color:red;}
+
+/* JUMBOTRON EDITS */
+.jumbotron {
+	height: 100%;
+	width: 100%;   
+	text-align: center;
+	background-color: black;
+}
+
+.jumbotron .container {
+	padding-top: 19%;
+} 
+
+.jumbotron h1 {
+	font-family: 'Play', sans-serif;
+	color: #FF7F00;
+}
+.jumbotron p {
+	font-family: 'Open Sans', sans-serif;
+}
+
+
+/* ABOUT EDITS */
+
+#about h1 {color:white;}
+#about small {color:gray;}
+#about {
+	font-family: 'Open Sans', sans-serif;
+	text-align: justify;
+	height: 90%;
+}
+#about p {color:white;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

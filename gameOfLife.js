@@ -1,4 +1,17 @@
-function Life($scope,$timeout) {
+var app = angular.module('lifeApp', [])
+
+	app.controller('exp', function ($scope) {
+
+			$scope.changeDimensions = function (rows, cols) {
+			$scope.numRows = rows;
+			$scope.numColumns = cols;
+		}
+	})
+
+
+
+// Controller for the Game of Life app
+app.controller("Life", function ($scope,$timeout) {
 
 	
 	// Constructor for the cell object
@@ -19,32 +32,33 @@ function Life($scope,$timeout) {
 		return arr;
 	}
 
-
+			
+	
 	// Shorthand for number of rows
 	// and columns to make easy changes
 	// if neccessary
-	var numRows = 20;
-	var numColumns = 30;
-	
+ 	$scope.numRows;
+	$scope.numColumns;
+
 	// Initializer for the 2D array
 	// of cells
-	$scope.cells = createCells(numRows);
+	$scope.cells = createCells($scope.numRows);
 
 	// To be used in preserving current
 	// generation of cells
-	var nextGen = createCells(numRows);		
+	var nextGen = createCells($scope.numRows);		
 										
 
 	// This is the initializer									
 	// for the crntgen of cells									
-	for (i=0;i<numRows;i++)							
-		for(j=0;j<numColumns;j++)						
+	for (i=0;i<$scope.numRows;i++)							
+		for(j=0;j<$scope.numColumns;j++)						
 			$scope.cells[i][j] = new Cell(false,0);
 
 	// This is the initializer
 	// for the nextgen of cells
-	for (i=0;i<numRows;i++)							
-		for(j=0;j<numColumns;j++)						
+	for (i=0;i<$scope.numRows;i++)							
+		for(j=0;j<$scope.numColumns;j++)						
 			nextGen[i][j] = new Cell(false,0);
 
 
@@ -53,33 +67,33 @@ function Life($scope,$timeout) {
 		// and checks that cell's neighbors (diagonals inclusive)
 		// Note how if the check is asking for a cell out 
 		// of bounds, it checks the cell on the opposite wall
-		for (i=0;i<numRows;i++)							
-			for(j=0;j<numColumns;j++)
+		for (i=0;i<$scope.numRows;i++)							
+			for(j=0;j<$scope.numColumns;j++)
 			{
 				var tempNghb = 0;
 				if (i-1>=0){
 					if ($scope.cells[i-1][j].isAlive)
 						tempNghb++;
-					if (j+1<numColumns){
+					if (j+1<$scope.numColumns){
 						if ($scope.cells[i-1][j+1].isAlive)
 							tempNghb++;
 					}else
 						if ($scope.cells[i-1][0].isAlive)
 							tempNghb++;
 				}else{
-					if ($scope.cells[numRows-1][j].isAlive)
+					if ($scope.cells[$scope.numRows-1][j].isAlive)
 						tempNghb++;
-					if (j+1<numColumns){
-						if ($scope.cells[numRows-1][j+1].isAlive)
+					if (j+1<$scope.numColumns){
+						if ($scope.cells[$scope.numRows-1][j+1].isAlive)
 							tempNghb++;
 					}else
-						if ($scope.cells[numRows-1][0].isAlive)
+						if ($scope.cells[$scope.numRows-1][0].isAlive)
 							tempNghb++;
 				}
-				if (j+1<numColumns){
+				if (j+1<$scope.numColumns){
 					if ($scope.cells[i][j+1].isAlive)
 						tempNghb++;
-					if (i+1<numRows){
+					if (i+1<$scope.numRows){
 						if ($scope.cells[i+1][j+1].isAlive)
 							tempNghb++;
 					}else
@@ -88,21 +102,21 @@ function Life($scope,$timeout) {
 				}else{
 					if ($scope.cells[i][0].isAlive)
 						tempNghb++;
-					if (i+1<numRows){
+					if (i+1<$scope.numRows){
 						if ($scope.cells[i+1][0].isAlive)
 							tempNghb++;
 					}else
 						if ($scope.cells[0][0].isAlive)
 							tempNghb++;
 				}
-				if (i+1<numRows)	{
+				if (i+1<$scope.numRows)	{
 					if ($scope.cells[i+1][j].isAlive)
 						tempNghb++;
 					if (j-1>=0){
 						if ($scope.cells[i+1][j-1].isAlive)
 							tempNghb++;
 					}else
-						if ($scope.cells[i+1][numColumns-1].isAlive)
+						if ($scope.cells[i+1][$scope.numColumns-1].isAlive)
 							tempNghb++;
 				}else{
 					if ($scope.cells[0][j].isAlive)
@@ -111,7 +125,7 @@ function Life($scope,$timeout) {
 						if ($scope.cells[0][j-1].isAlive)
 							tempNghb++;
 					}else
-						if ($scope.cells[0][numColumns-1].isAlive)
+						if ($scope.cells[0][$scope.numColumns-1].isAlive)
 							tempNghb++;
 				}
 				if (j-1>=0)	{
@@ -121,16 +135,16 @@ function Life($scope,$timeout) {
 						if ($scope.cells[i-1][j-1].isAlive)
 							tempNghb++;
 					}else
-						if ($scope.cells[numRows-1][j-1].isAlive)
+						if ($scope.cells[$scope.numRows-1][j-1].isAlive)
 							tempNghb++;
 				}else{
-					if ($scope.cells[i][numColumns-1].isAlive)
+					if ($scope.cells[i][$scope.numColumns-1].isAlive)
 						tempNghb++;
 					if (i-1>=0){
-						if ($scope.cells[i-1][numColumns-1].isAlive)
+						if ($scope.cells[i-1][$scope.numColumns-1].isAlive)
 							tempNghb++;
 					}else
-						if ($scope.cells[numRows-1][numColumns-1].isAlive)
+						if ($scope.cells[$scope.numRows-1][$scope.numColumns-1].isAlive)
 							tempNghb++;
 				}
 				$scope.cells[i][j].numNghb = tempNghb;
@@ -140,8 +154,8 @@ function Life($scope,$timeout) {
 		// Checks the life-state of the current generation
 		// against the rules to determine the life-state of		
 		// the next generation, using number of neighbors
-		for (i=0;i<numRows;i++)							
-			for(j=0;j<numColumns;j++)						 
+		for (i=0;i<$scope.numRows;i++)							
+			for(j=0;j<$scope.numColumns;j++)						 
 			{											
 				if ($scope.cells[i][j].isAlive) {
 					if ($scope.cells[i][j].numNghb === 2 || $scope.cells[i][j].numNghb === 3)
@@ -160,8 +174,8 @@ function Life($scope,$timeout) {
 		// the "next generation" to the "current generation"
 		// Updating after the neighbor count prevents the function
 		// from losing the data on the current generation
-		for (i=0;i<numRows;i++)							
-			for(j=0;j<numColumns;j++)						
+		for (i=0;i<$scope.numRows;i++)							
+			for(j=0;j<$scope.numColumns;j++)						
 				$scope.cells[i][j].isAlive = nextGen[i][j].isAlive;
 	}
 
@@ -197,8 +211,8 @@ function Life($scope,$timeout) {
 	};
 
 	$scope.randomize = function () {
-		for (i=0;i<numRows;i++)
-			for(j=0;j<numColumns;j++)
+		for (i=0;i<$scope.numRows;i++)
+			for(j=0;j<$scope.numColumns;j++)
 				if (Math.random()>=0.5) {
 					$scope.cells[i][j].isAlive = true;
 				}else
@@ -206,8 +220,14 @@ function Life($scope,$timeout) {
 	}
 
 
+})
 
 
 
-
-}
+app.directive('change', function () {
+	return function (element,scope,attrs) {
+		element.bind(true, function(){
+			$scope.numRows=attrs.change;	
+		})	
+	}
+})
