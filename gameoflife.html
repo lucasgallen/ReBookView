@@ -43,7 +43,7 @@
 										<div class="navbar-collapse collapse">
 											<ul class="nav navbar-nav">
 												<li class="active"><a href="index.html#about">about</a></li> 
-												<li><a href="#contact">contact</a></li>
+												<li><a href="contact.html">contact</a></li>
 											</ul>
 											<ul class="nav navbar-nav navbar-right">
 												<li id="projectmenu" class="dropdown">
@@ -53,7 +53,7 @@
 													</a>
 													<ul class="dropdown-menu" role="menu" aria-labelledby="proj">
 														<li role="presentation">
-															<a role="menuitem" tabindex="-1" href="simulation.html">Conway's Game of Life</a>
+															<a role="menuitem" tabindex="-1" href="gameoflife.html">Conway's Game of Life</a>
 														</li>
 														<li role="presentation" class="divider"></li>
 														<li class="dropdown-header">Coming Soon</li>
@@ -72,7 +72,7 @@
 											<!--====================== Conway's Game of Life App =======================-->
   													<!-- ================== Extra Small Screen ===========================-->
 		<div class="jumbotron visible-xs">
-				<h1 id="title"><span id="yellow">Conway's</span> <span id="blue">Game</span> of <span id="green">Life</span></h1>
+				<h1 id="title"><span id="yellow">Conway's</span> <span id="blue">Game</span> <span id='red'>of</span> <span id="green">Life</span></h1>
 				<p>Welcome! Look at you, with your lightweight phone and it's tiny screen. Come back with a wider browser to play!</p>
 				<p><a class="btn btn-primary btn-lg" href="#description">learn more</a></p>
 		</div>
@@ -294,8 +294,13 @@
 				</div><!--/.container-->
 		</div><!-- /.wrapper -->
 
-		<div class="wrapper">
-						<div id="description" class='container'>
+		<div class="wrapper" id="description">
+			<div class='container'>
+				<div class="page-header">
+					<h1><span id='yellow'>Rules</span> to the <span id='blue'>Game</span> <small>... of <span id='green'>Life</span></small></h1>
+				</div>
+			</div>
+						<div class='container'>
 							<p>
 								Conway's Game of Life is a simulation that operates on four very simple rules:
 								<ul>
