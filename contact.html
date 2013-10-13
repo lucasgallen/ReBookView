@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	
+			<link rel="icon" type="image/png" href="icon.png">
+			<link href="resources/dist/css/bootstrap.css" rel="stylesheet">
+			<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+			<link rel="stylesheet" type="text/css" href="contact.css">
+			<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Play|Open+Sans" type="text/css">
+
+	</head>
+
+
+	<body>
+					<!-- ================================ Navbar ===================== -->
+					<div class="navbar-wrapper">
+										<div class="container">
+											<div class="navbar navbar-inverse navbar-fixed-top">
+													<div class="container">
+														<div class="navbar-header">
+															<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">	
+																<span class="icon-bar"></span>
+															</button>
+															<a class="navbar-brand" href="index.html">
+																<span id="green">l</span>
+																<span id="yellow">u</span>
+																<span id="blue">c</span>
+																<span id="yellow">a</span>
+																<span id="green">s</span>
+																<span id="red">G</span>
+																<span id="blue">a</span>
+																<span id="yellow">l</span>
+																<span id="yellow">l</span>
+																<span id="green">e</span>
+																<span id="blue">n</span>
+															</a>
+														</div>
+														<div class="navbar-collapse collapse">
+															<ul class="nav navbar-nav">
+																<li class="active"><a href="index.html#about">about</a></li> 
+																<li><a href="contact.html">contact</a></li>
+															</ul>
+															<ul class="nav navbar-nav navbar-right">
+																<li id="projectmenu" class="dropdown">
+																	<a href="#" id="proj" role="button" class="dropdown-toggle" data-toggle="dropdown">
+																		projects
+																		<b class="caret"></b>
+																	</a>
+																	<ul class="dropdown-menu" role="menu" aria-labelledby="proj">
+																		<li role="presentation">
+																			<a role="menuitem" tabindex="-1" href="gameoflife.html">Conway's Game of Life</a>
+																		</li>
+																		<li role="presentation" class="divider"></li>
+																		<li class="dropdown-header">Coming Soon</li>
+																		<li role="presentation">
+																			<a role="menuitem" tabindex="-1" href="busker.html">Busker</a>
+																		</li>
+																	</ul>
+																</li>
+															</ul>
+														</div>
+													</div><!-- /.container -->
+											</div><!-- /.navbar -->
+										</div><!-- /.container -->
+					</div><!-- /.navbar-wrapper -->
+		
+
+		<!-- ======================== Contact Panel ====================== -->
+		<div class='container'>
+			<div class='page-header'>
+				<h1 id='yellow'>Contact <small>What's Up?</small></h1>
+			</div>
+		</div>
+		
+		<div class='container'>
+						<div class='panel panel-default'>
+							<div class='panel-body'>
+							<div class='container'>
+								<form role='form' action="mail.php" method="POST">
+									<div class='form-group'>
+										<label for='subject' id='blue'>subject</label>
+										<input id='subject' name='subject' class='form-control' type="text">
+									</div>
+									<div class='form-group'>
+										<label for='message' id='green' >message</label>
+										<textarea class='form-control' rows=10 id="message" name='message'></textarea>	
+									</div>
+									<form method="post" action="mail.php">
+										<?php
+											require_once('recaptchalib.php');
+											$publickey = "6LeStugSAAAAAOXVNzkPK_-ocGUe4_49k8PbxMVQ"; 
+											echo recaptcha_get_html($publickey);
+										?>
+										  <script type="text/javascript"
+										  src="http://www.google.com/recaptcha/api/challenge?k=6LeStugSAAAAAOXVNzkPK_-ocGUe4_49k8PbxMVQ">
+											</script>
+											<noscript>
+											 <iframe src="http://www.google.com/recaptcha/api/noscript?k=6LeStugSAAAAAOXVNzkPK_-ocGUe4_49k8PbxMVQ"
+													 height="300" width="500" frameborder="0"></iframe><br>
+											 <textarea name="recaptcha_challenge_field" rows="3" cols="40">
+											 </textarea>
+											 <input type="hidden" name="recaptcha_response_field"
+													 value="manual_challenge">
+											</noscript>	
+										<input class='btn btn-primary' type="submit" />
+									</form><!-- /.reCaptcha -->
+
+								</form>	
+							</div><!-- /.container -->
+							</div>
+						</div><!-- /.panel -->
+		</div><!-- /.inner -->
+
+		<script src="https://code.jquery.com/jquery.js"></script>
+		<script src="resources/dist/js/bootstrap.js"></script>
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	</body>
+
+
+</html>
