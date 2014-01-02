@@ -3,335 +3,335 @@
 
 <head>
 
-	<title>Simulations!</title>
-	<link rel="icon" type="image/png" href="icon.png">
+    <title>Simulations!</title>
+    <link rel="icon" type="image/png" href="icon.png">
   <link href="resources/dist/css/bootstrap.css" rel="stylesheet">
-	<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="gameoflife.css">
-	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Play|Open+Sans" type="text/css">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="gameoflife.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Play|Open+Sans" type="text/css">
 
 </head>
 
 <body ng-app="lifeApp">
 
-	
+    
 
-			<!-- ================= Navigation Bar (similar to the homepage) ========= -->
+            <!-- ================= Navigation Bar (similar to the homepage) ========= -->
 
-	<div class="navbar-wrapper">
-						<div class="container">
-							<div class="navbar navbar-inverse navbar-fixed-top">
-									<div class="container">
-										<div class="navbar-header">
-											<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">	
-												<span class="icon-bar"></span>
-											</button>
-											<a class="navbar-brand" href="index.html">
-												<span id="green">l</span>
-												<span id="yellow">u</span>
-												<span id="blue">c</span>
-												<span id="yellow">a</span>
-												<span id="green">s</span>
-												<span id="red">G</span>
-												<span id="blue">a</span>
-												<span id="yellow">l</span>
-												<span id="yellow">l</span>
-												<span id="green">e</span>
-												<span id="blue">n</span>
-											</a>
-										</div>
-										<div class="navbar-collapse collapse">
-											<ul class="nav navbar-nav">
-												<li class="active"><a href="index.html#about">about</a></li> 
-												<li><a href="contact.html">contact</a></li>
-											</ul>
-											<ul class="nav navbar-nav navbar-right">
-												<li id="projectmenu" class="dropdown">
-													<a href="#" id="proj" role="button" class="dropdown-toggle" data-toggle="dropdown">
-														projects
-														<b class="caret"></b>
-													</a>
-													<ul class="dropdown-menu" role="menu" aria-labelledby="proj">
-														<li role="presentation">
-															<a role="menuitem" tabindex="-1" href="gameoflife.html">Conway's Game of Life</a>
-														</li>
-														<li role="presentation" class="divider"></li>
-														<li class="dropdown-header">Coming Soon</li>
-														<li role="presentation">
-															<a role="menuitem" tabindex="-1" href="busker.html">Busker</a>
-														</li>
-													</ul>
-												</li>
-											</ul>
-										</div>
-									</div><!-- /.container -->
-							</div><!-- /.navbar -->
-						</div><!-- /.container -->
-	</div><!-- /.navbar-wrapper -->
+    <div class="navbar-wrapper">
+                        <div class="container">
+                            <div class="navbar navbar-inverse navbar-fixed-top">
+                                    <div class="container">
+                                        <div class="navbar-header">
+                                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">  
+                                                <span class="icon-bar"></span>
+                                            </button>
+                                            <a class="navbar-brand" href="index.html">
+                                                <span id="green">l</span>
+                                                <span id="yellow">u</span>
+                                                <span id="blue">c</span>
+                                                <span id="yellow">a</span>
+                                                <span id="green">s</span>
+                                                <span id="red">G</span>
+                                                <span id="blue">a</span>
+                                                <span id="yellow">l</span>
+                                                <span id="yellow">l</span>
+                                                <span id="green">e</span>
+                                                <span id="blue">n</span>
+                                            </a>
+                                        </div>
+                                        <div class="navbar-collapse collapse">
+                                            <ul class="nav navbar-nav">
+                                                <li class="active"><a href="index.html#about">about</a></li> 
+                                                <li><a href="contact.html">contact</a></li>
+                                            </ul>
+                                            <ul class="nav navbar-nav navbar-right">
+                                                <li id="projectmenu" class="dropdown">
+                                                    <a href="#" id="proj" role="button" class="dropdown-toggle" data-toggle="dropdown">
+                                                        projects
+                                                        <b class="caret"></b>
+                                                    </a>
+                                                    <ul class="dropdown-menu" role="menu" aria-labelledby="proj">
+                                                        <li role="presentation">
+                                                            <a role="menuitem" tabindex="-1" href="gameoflife.html">Conway's Game of Life</a>
+                                                        </li>
+                                                        <li role="presentation" class="divider"></li>
+                                                        <li class="dropdown-header">Coming Soon</li>
+                                                        <li role="presentation">
+                                                            <a role="menuitem" tabindex="-1" href="busker.html">Busker</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div><!-- /.container -->
+                            </div><!-- /.navbar -->
+                        </div><!-- /.container -->
+    </div><!-- /.navbar-wrapper -->
 
-											<!--====================== Conway's Game of Life App =======================-->
-  													<!-- ================== Extra Small Screen ===========================-->
-		<div class="jumbotron visible-xs">
-				<h1 id="title"><span id="yellow">Conway's</span> <span id="blue">Game</span> <span id='red'>of</span> <span id="green">Life</span></h1>
-				<p>Welcome! Look at you, with your lightweight phone and it's tiny screen. Come back with a wider browser to play!</p>
-				<p><a class="btn btn-primary btn-lg" href="#description">learn more</a></p>
-		</div>
-		
-														<!-- ===================== Small Screen ============================= -->	
-		<div class="wrapper visible-sm" ng-controller="exp" ng-init="changeDimensions(9,16)">
-					<div class="app container"> 
-						<div ng-controller="Life" >
-							<div class="row"> 
-								<div class="col-sm-3">
-									<p>Press the play button below to let the game run continuously; pressing it again pauses the simulation.</p> 
-									<p>The step forward button on the left simulates one generation of cells at a time.</p>
-									<p>Note the simulation is trivial unless you start with some assortment of living cells. Try to put them near each other to find interesting patterns!</p>
-								</div>
-								<div class="col-sm-6" >	
-									<h1 id="title"><span id="yellow">Conway's</span> <span id="blue">Game</span> of <span id="green">Life</span></h1>
-									<div class='fence' ng-model="cells">
-										<span 
-										ng-repeat="row in cells"
-										>
-										<span 
-										ng-repeat="cell in row"
-										>
-											<div 
-											ng-if="cells[$parent.$index][$index].isAlive" 
-											id="row_alive"
-											ng-click="cells[$parent.$parent.$index][$parent.$index].isAlive=!cells[$parent.$parent.$index][$parent.$index].isAlive"
-											>
-											</div>
-											<div 
-											ng-if="!cells[$parent.$index][$index].isAlive" 
-											id="row"
-											ng-click="cells[$parent.$parent.$index][$parent.$index].isAlive=!cells[$parent.$parent.$index][$parent.$index].isAlive"
-											>
-											</div>					
-										</span>
-										</span>
-									</div><!--/.fence -->
-							</div><!--/.col-6-->
-							
-							<div class="col-sm-3">
-								<p>The grey squares designate "dead" cells and white squares designate "alive" cells.</p>
-								<p>Note, although the grid appears as a square, as far as the cells are concerned the grid is a torus (think the surface of a donut). This structure may be familiar to those who have played Astroids. </p>
-								<p>If you're not certain which cells to activate or bring to life, try out the shuffle button!</p>
-								<p>Click the grey squares to get started!</p>
-							</div>
+                                            <!--====================== Conway's Game of Life App =======================-->
+                                                    <!-- ================== Extra Small Screen ===========================-->
+        <div class="jumbotron visible-xs">
+                <h1 id="title"><span id="yellow">Conway's</span> <span id="blue">Game</span> <span id='red'>of</span> <span id="green">Life</span></h1>
+                <p>Welcome! Look at you, with your lightweight phone and it's tiny screen. Come back with a wider browser to play!</p>
+                <p><a class="btn btn-primary btn-lg" href="#description">learn more</a></p>
+        </div>
+        
+                                                        <!-- ===================== Small Screen ============================= -->   
+        <div class="wrapper visible-sm" ng-controller="exp" ng-init="changeDimensions(9,16)">
+                    <div class="app container"> 
+                        <div ng-controller="Life" >
+                            <div class="row"> 
+                                <div class="col-sm-3">
+                                    <p>Press the play button below to let the game run continuously; pressing it again pauses the simulation.</p> 
+                                    <p>The step forward button on the left simulates one generation of cells at a time.</p>
+                                    <p>Note the simulation is trivial unless you start with some assortment of living cells. Try to put them near each other to find interesting patterns!</p>
+                                </div>
+                                <div class="col-sm-6" > 
+                                    <h1 id="title"><span id="yellow">Conway's</span> <span id="blue">Game</span> of <span id="green">Life</span></h1>
+                                    <div class='fence' ng-model="cells">
+                                        <span 
+                                        ng-repeat="row in cells"
+                                        >
+                                        <span 
+                                        ng-repeat="cell in row"
+                                        >
+                                            <div 
+                                            ng-if="cells[$parent.$index][$index].isAlive" 
+                                            id="row_alive"
+                                            ng-click="cells[$parent.$parent.$index][$parent.$index].isAlive=!cells[$parent.$parent.$index][$parent.$index].isAlive"
+                                            >
+                                            </div>
+                                            <div 
+                                            ng-if="!cells[$parent.$index][$index].isAlive" 
+                                            id="row"
+                                            ng-click="cells[$parent.$parent.$index][$parent.$index].isAlive=!cells[$parent.$parent.$index][$parent.$index].isAlive"
+                                            >
+                                            </div>                  
+                                        </span>
+                                        </span>
+                                    </div><!--/.fence -->
+                            </div><!--/.col-6-->
+                            
+                            <div class="col-sm-3">
+                                <p>The grey squares designate "dead" cells and white squares designate "alive" cells.</p>
+                                <p>Note, although the grid appears as a square, as far as the cells are concerned the grid is a torus (think the surface of a donut). This structure may be familiar to those who have played Astroids. </p>
+                                <p>If you're not certain which cells to activate or bring to life, try out the shuffle button!</p>
+                                <p>Click the grey squares to get started!</p>
+                            </div>
 
-						</div><!--/.row-->					
-						
+                        </div><!--/.row-->                  
+                        
 
-						<div class="row">
-							<div class='container'>
-											<div class="col-sm-1 col-sm-offset-3" id='stepbtn'>
-												<button ng-click="lifeStep()">
-													<span class="glyphicon glyphicon-step-forward"></span>
-												</button>	
-											</div>
-											<div class="col-sm-1 col-sm-offset-2" id='randbtn'>
-												<button ng-click="randomize()">
-													<span class="glyphicon glyphicon-random"></span>
-												</button>	
-											</div>
-											<div class="col-sm-4 col-sm-offset-1" id='playbtn'>
-												<button ng-click="playLifeButton()">
-													<span class="glyphicon glyphicon-pause"></span><span class="glyphicon glyphicon-play"></span>
-												</button>
-											</div>
-							</div><!-- /.container -->
-						</div><!-- /.row -->
-
-
-
-					</div><!--/.ng-app-->
-				</div><!--/.container-->
-		</div><!-- /.wrapper -->
-
-
-									<!-- ======================== Medium Size Screen =========================== --!>
-		<div class="wrapper visible-md" ng-controller="exp" ng-init="changeDimensions(11,21)">
-					<div class="app container"> 
-						<div ng-controller="Life" >
-							<div class="row"> 
-								<div class="col-md-3">
-									<p>Press the play button below to let the game run continuously; pressing it again pauses the simulation.</p> 
-									<p>The step forward button on the left simulates one generation of cells at a time.</p>
-									<p>Note the simulation is trivial unless you start with some assortment of living cells. Try to put them near each other to find interesting patterns!</p>
-								</div>
-								<div class="col-md-6" >	
-									<h1 id="title"><span id="yellow">Conway's</span> <span id="blue">Game</span> of <span id="green">Life</span></h1>
-									<div class='fence' ng-model="cells">
-										<span 
-										ng-repeat="row in cells"
-										>
-										<span 
-										ng-repeat="cell in row"
-										>
-											<div 
-											ng-if="cells[$parent.$index][$index].isAlive" 
-											id="row_alive"
-											ng-click="cells[$parent.$parent.$index][$parent.$index].isAlive=!cells[$parent.$parent.$index][$parent.$index].isAlive"
-											>
-											</div>
-											<div 
-											ng-if="!cells[$parent.$index][$index].isAlive" 
-											id="row"
-											ng-click="cells[$parent.$parent.$index][$parent.$index].isAlive=!cells[$parent.$parent.$index][$parent.$index].isAlive"
-											>
-											</div>					
-										</span>
-										</span>
-									</div><!--/.fence -->
-							</div><!--/.col-6-->
-							
-							<div class="col-md-3">
-								<p>The grey squares designate "dead" cells and white squares designate "alive" cells.</p>
-								<p>Note, although the grid appears as a square, as far as the cells are concerned the grid is a torus (think the surface of a donut). This structure may be familiar to those who have played Astroids. </p>
-								<p>If you're not certain which cells to activate or bring to life, try out the shuffle button!</p>
-								<p>Click the grey squares to get started!</p>
-							</div>
-
-						</div><!--/.row-->					
-						
-
-						<div class="row">
-							<div class='container'>
-											<div class="col-md-1 col-md-offset-3" id='stepbtn'>
-												<button ng-click="lifeStep()">
-													<span class="glyphicon glyphicon-step-forward"></span>
-												</button>	
-											</div>
-											<div class="col-md-1 col-md-offset-2" id='randbtn'>
-												<button ng-click="randomize()">
-													<span class="glyphicon glyphicon-random"></span>
-												</button>	
-											</div>
-											<div class="col-md-4 col-md-offset-1" id='playbtn'>
-												<button ng-click="playLifeButton()">
-													<span class="glyphicon glyphicon-pause"></span><span class="glyphicon glyphicon-play"></span>
-												</button>
-											</div>
-							</div><!-- /.container -->
-						</div><!-- /.row -->
+                        <div class="row">
+                            <div class='container'>
+                                            <div class="col-sm-1 col-sm-offset-3" id='stepbtn'>
+                                                <button ng-click="lifeStep()">
+                                                    <span class="glyphicon glyphicon-step-forward"></span>
+                                                </button>   
+                                            </div>
+                                            <div class="col-sm-1 col-sm-offset-2" id='randbtn'>
+                                                <button ng-click="randomize()">
+                                                    <span class="glyphicon glyphicon-random"></span>
+                                                </button>   
+                                            </div>
+                                            <div class="col-sm-4 col-sm-offset-1" id='playbtn'>
+                                                <button ng-click="playLifeButton()">
+                                                    <span class="glyphicon glyphicon-pause"></span><span class="glyphicon glyphicon-play"></span>
+                                                </button>
+                                            </div>
+                            </div><!-- /.container -->
+                        </div><!-- /.row -->
 
 
 
-					</div><!--/.ng-app-->
-				</div><!--/.container-->
-		</div><!-- /.wrapper -->
-
-									<!-- ============================ Large Size Screen ============================ -->
-				<div id="wrap" class="wrapper visible-lg" ng-controller="exp" ng-init="changeDimensions(14,26)">
-					<div class="app container"> 
-						<div ng-controller="Life">
-							<div class="row">
-								<div class="col-md-3">
-									<p>Press the play button below to let the game run continuously; pressing it again pauses the simulation.</p> 
-									<p>The step forward button on the left simulates one generation of cells at a time.</p>
-									<p>Note the simulation is trivial unless you start with some assortment of living cells. Try to put them near each other to find interesting patterns!</p>
-								</div>
-								<div class="col-md-6">	
-									<h1 id="title"><span id="yellow">Conway's</span> <span id="blue">Game</span> of <span id="green">Life</span></h1>
-									<div class='fence' ng-model="cells">
-										<span 
-										ng-repeat="row in cells"
-										>
-										<span 
-										ng-repeat="cell in row"
-										>
-											<div 
-											ng-if="cells[$parent.$index][$index].isAlive" 
-											id="row_alive"
-											ng-click="cells[$parent.$parent.$index][$parent.$index].isAlive=!cells[$parent.$parent.$index][$parent.$index].isAlive"
-											>
-											</div>
-											<div 
-											ng-if="!cells[$parent.$index][$index].isAlive" 
-											id="row"
-											ng-click="cells[$parent.$parent.$index][$parent.$index].isAlive=!cells[$parent.$parent.$index][$parent.$index].isAlive"
-											>
-											</div>					
-										</span>
-										</span>
-									</div><!--/.ng-model -->
-							</div><!--/.col-6-->
-							
-							<div class="col-md-3">
-								<p>The grey squares designate "dead" cells and white squares designate "alive" cells.</p>
-								<p>Note, although the grid appears as a square, as far as the cells are concerned the grid is a torus (think the surface of a donut). This structure may be familiar to those who have played Astroids. </p>
-								<p>If you're not certain which cells to activate or bring to life, try out the shuffle button!</p>
-								<p>Click the grey squares to get started!</p>
-							</div>
-
-						</div><!--/.row-->					
-						
-
-						<div class="row">
-							<div class='container'>
-											<div class="col-md-1 col-md-offset-3" id='stepbtn'>
-												<button ng-click="lifeStep()">
-													<span class="glyphicon glyphicon-step-forward"></span>
-												</button>	
-											</div>
-											<div class="col-md-1 col-md-offset-2" id='randbtn'>
-												<button ng-click="randomize()">
-													<span class="glyphicon glyphicon-random"></span>
-												</button>	
-											</div>
-											<div class="col-md-4 col-md-offset-1" id='playbtn'>
-												<button ng-click="playLifeButton()">
-													<span class="glyphicon glyphicon-pause"></span><span class="glyphicon glyphicon-play"></span>
-												</button>
-											</div>
-							</div><!-- /.container -->
-						</div><!-- /.row -->
+                    </div><!--/.ng-app-->
+                </div><!--/.container-->
+        </div><!-- /.wrapper -->
 
 
+                                    <!-- ======================== Medium Size Screen =========================== --!>
+        <div class="wrapper visible-md" ng-controller="exp" ng-init="changeDimensions(11,21)">
+                    <div class="app container"> 
+                        <div ng-controller="Life" >
+                            <div class="row"> 
+                                <div class="col-md-3">
+                                    <p>Press the play button below to let the game run continuously; pressing it again pauses the simulation.</p> 
+                                    <p>The step forward button on the left simulates one generation of cells at a time.</p>
+                                    <p>Note the simulation is trivial unless you start with some assortment of living cells. Try to put them near each other to find interesting patterns!</p>
+                                </div>
+                                <div class="col-md-6" > 
+                                    <h1 id="title"><span id="yellow">Conway's</span> <span id="blue">Game</span> of <span id="green">Life</span></h1>
+                                    <div class='fence' ng-model="cells">
+                                        <span 
+                                        ng-repeat="row in cells"
+                                        >
+                                        <span 
+                                        ng-repeat="cell in row"
+                                        >
+                                            <div 
+                                            ng-if="cells[$parent.$index][$index].isAlive" 
+                                            id="row_alive"
+                                            ng-click="cells[$parent.$parent.$index][$parent.$index].isAlive=!cells[$parent.$parent.$index][$parent.$index].isAlive"
+                                            >
+                                            </div>
+                                            <div 
+                                            ng-if="!cells[$parent.$index][$index].isAlive" 
+                                            id="row"
+                                            ng-click="cells[$parent.$parent.$index][$parent.$index].isAlive=!cells[$parent.$parent.$index][$parent.$index].isAlive"
+                                            >
+                                            </div>                  
+                                        </span>
+                                        </span>
+                                    </div><!--/.fence -->
+                            </div><!--/.col-6-->
+                            
+                            <div class="col-md-3">
+                                <p>The grey squares designate "dead" cells and white squares designate "alive" cells.</p>
+                                <p>Note, although the grid appears as a square, as far as the cells are concerned the grid is a torus (think the surface of a donut). This structure may be familiar to those who have played Astroids. </p>
+                                <p>If you're not certain which cells to activate or bring to life, try out the shuffle button!</p>
+                                <p>Click the grey squares to get started!</p>
+                            </div>
 
-					</div><!--/.ng-app-->
-				</div><!--/.container-->
-		</div><!-- /.wrapper -->
+                        </div><!--/.row-->                  
+                        
 
-		<div class="wrapper" id="description">
-			<div class='container'>
-				<div class="page-header">
-					<h1><span id='yellow'>Rules</span> to the <span id='blue'>Game</span> <small>... of <span id='green'>Life</span></small></h1>
-				</div>
-			</div>
-						<div class='container'>
-							<p>
-								Conway's Game of Life is a simulation that operates on four very simple rules:
-								<ul>
-									<li>
-										If the cell is alive and if the cell has either two or three neighbors, then the cell lives to the next generation.
-									</li>
-									<li>
-										If the cell is alive and the cell only has one or fewer neighbors, then the cell dies.
-									</li>
-									<li>
-										If the cell is alive and the cell has four or more neighbors, then the cell dies.
-									</li>
-									<li>
-										If the cell is dead and the cell has exactly three neighbros, then the cell is born into the next generation.
-									</li>
-								</ul>
-							</p>
-							<p>
-								Here we consider a "neighbor" to be a living cell that is adjacent (including diagonally so) to the cell in question.
-							</p>
-							<p>
-								Conway's Game is interesting because of how complex the simulation can get with a comparatively simple set of rules. To me this is has much to do with the mystery of life and the "ghost in the shell"; it's a clue to the question, "what is consciousness?" Before I get a bit too philosophical here, check out the work of <a href="http://en.wikipedia.org/wiki/Douglas_Hofstadter#Books">Douglas Hofstadter</a>. In particular, <i>I Am a Strange Loop</i> and <i>G&#246;del, Escher, Bach: an Eternal Golden Braid</i> are of interest here.
-							</p>		
-					</div>
-		</div><!-- /.wrapper -->	
+                        <div class="row">
+                            <div class='container'>
+                                            <div class="col-md-1 col-md-offset-3" id='stepbtn'>
+                                                <button ng-click="lifeStep()">
+                                                    <span class="glyphicon glyphicon-step-forward"></span>
+                                                </button>   
+                                            </div>
+                                            <div class="col-md-1 col-md-offset-2" id='randbtn'>
+                                                <button ng-click="randomize()">
+                                                    <span class="glyphicon glyphicon-random"></span>
+                                                </button>   
+                                            </div>
+                                            <div class="col-md-4 col-md-offset-1" id='playbtn'>
+                                                <button ng-click="playLifeButton()">
+                                                    <span class="glyphicon glyphicon-pause"></span><span class="glyphicon glyphicon-play"></span>
+                                                </button>
+                                            </div>
+                            </div><!-- /.container -->
+                        </div><!-- /.row -->
 
-	<script type="text/javascript" src="angular.js"></script>		
-	<script type="text/javascript" src="gameOfLife.js"></script>
-	<script src="https://code.jquery.com/jquery.js"></script>
-	<script src="resources/dist/js/bootstrap.js"></script>
-	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+
+                    </div><!--/.ng-app-->
+                </div><!--/.container-->
+        </div><!-- /.wrapper -->
+
+                                    <!-- ============================ Large Size Screen ============================ -->
+                <div id="wrap" class="wrapper visible-lg" ng-controller="exp" ng-init="changeDimensions(14,26)">
+                    <div class="app container"> 
+                        <div ng-controller="Life">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p>Press the play button below to let the game run continuously; pressing it again pauses the simulation.</p> 
+                                    <p>The step forward button on the left simulates one generation of cells at a time.</p>
+                                    <p>Note the simulation is trivial unless you start with some assortment of living cells. Try to put them near each other to find interesting patterns!</p>
+                                </div>
+                                <div class="col-md-6">  
+                                    <h1 id="title"><span id="yellow">Conway's</span> <span id="blue">Game</span> of <span id="green">Life</span></h1>
+                                    <div class='fence' ng-model="cells">
+                                        <span 
+                                        ng-repeat="row in cells"
+                                        >
+                                        <span 
+                                        ng-repeat="cell in row"
+                                        >
+                                            <div 
+                                            ng-if="cells[$parent.$index][$index].isAlive" 
+                                            id="row_alive"
+                                            ng-click="cells[$parent.$parent.$index][$parent.$index].isAlive=!cells[$parent.$parent.$index][$parent.$index].isAlive"
+                                            >
+                                            </div>
+                                            <div 
+                                            ng-if="!cells[$parent.$index][$index].isAlive" 
+                                            id="row"
+                                            ng-click="cells[$parent.$parent.$index][$parent.$index].isAlive=!cells[$parent.$parent.$index][$parent.$index].isAlive"
+                                            >
+                                            </div>                  
+                                        </span>
+                                        </span>
+                                    </div><!--/.ng-model -->
+                            </div><!--/.col-6-->
+                            
+                            <div class="col-md-3">
+                                <p>The grey squares designate "dead" cells and white squares designate "alive" cells.</p>
+                                <p>Note, although the grid appears as a square, as far as the cells are concerned the grid is a torus (think the surface of a donut). This structure may be familiar to those who have played Astroids. </p>
+                                <p>If you're not certain which cells to activate or bring to life, try out the shuffle button!</p>
+                                <p>Click the grey squares to get started!</p>
+                            </div>
+
+                        </div><!--/.row-->                  
+                        
+
+                        <div class="row">
+                            <div class='container'>
+                                            <div class="col-md-1 col-md-offset-3" id='stepbtn'>
+                                                <button ng-click="lifeStep()">
+                                                    <span class="glyphicon glyphicon-step-forward"></span>
+                                                </button>   
+                                            </div>
+                                            <div class="col-md-1 col-md-offset-2" id='randbtn'>
+                                                <button ng-click="randomize()">
+                                                    <span class="glyphicon glyphicon-random"></span>
+                                                </button>   
+                                            </div>
+                                            <div class="col-md-4 col-md-offset-1" id='playbtn'>
+                                                <button ng-click="playLifeButton()">
+                                                    <span class="glyphicon glyphicon-pause"></span><span class="glyphicon glyphicon-play"></span>
+                                                </button>
+                                            </div>
+                            </div><!-- /.container -->
+                        </div><!-- /.row -->
+
+
+
+                    </div><!--/.ng-app-->
+                </div><!--/.container-->
+        </div><!-- /.wrapper -->
+
+        <div class="wrapper" id="description">
+            <div class='container'>
+                <div class="page-header">
+                    <h1><span id='yellow'>Rules</span> to the <span id='blue'>Game</span> <small>... of <span id='green'>Life</span></small></h1>
+                </div>
+            </div>
+                        <div class='container'>
+                            <p>
+                                Conway's Game of Life is a simulation that operates on four very simple rules:
+                                <ul>
+                                    <li>
+                                        If the cell is alive and if the cell has either two or three neighbors, then the cell lives to the next generation.
+                                    </li>
+                                    <li>
+                                        If the cell is alive and the cell only has one or fewer neighbors, then the cell dies.
+                                    </li>
+                                    <li>
+                                        If the cell is alive and the cell has four or more neighbors, then the cell dies.
+                                    </li>
+                                    <li>
+                                        If the cell is dead and the cell has exactly three neighbros, then the cell is born into the next generation.
+                                    </li>
+                                </ul>
+                            </p>
+                            <p>
+                                Here we consider a "neighbor" to be a living cell that is adjacent (including diagonally so) to the cell in question.
+                            </p>
+                            <p>
+                                Conway's Game is interesting because of how complex the simulation can get with a comparatively simple set of rules. To me this is has much to do with the mystery of life and the "ghost in the shell"; it's a clue to the question, "what is consciousness?" Before I get a bit too philosophical here, check out the work of <a href="http://en.wikipedia.org/wiki/Douglas_Hofstadter#Books">Douglas Hofstadter</a>. In particular, <i>I Am a Strange Loop</i> and <i>G&#246;del, Escher, Bach: an Eternal Golden Braid</i> are of interest here.
+                            </p>        
+                    </div>
+        </div><!-- /.wrapper -->    
+
+    <script type="text/javascript" src="angular.js"></script>       
+    <script type="text/javascript" src="gameOfLife.js"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="resources/dist/js/bootstrap.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 </body>
 
 </html>

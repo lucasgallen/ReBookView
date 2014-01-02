@@ -1,7 +1,7 @@
 html, body {
-	height: 100%;
-	background-color: black;
-	border-color: #238E23;
+    height: 100%;
+    background-color: black;
+    border-color: #238E23;
 }
 
 div {border-color: #238E23}
@@ -9,8 +9,8 @@ div {border-color: #238E23}
 .page-header {margin-top: 16%;}
 
 .panel {
-	color: #dddddd;
-	background-color: #222222;
+    color: #dddddd;
+    background-color: #222222;
 }
 .panel-body {width:100%}
 

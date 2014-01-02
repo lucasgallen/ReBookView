@@ -1,40 +1,40 @@
 html, body {
-	height: 100%;
-	background-color: black;
+    height: 100%;
+    background-color: black;
 }
 
 /* JUMBOTRON EDITS */
 .jumbotron {
-	margin-top: 10%;
-	height: 100%;
-	width: 100%;   
-	text-align: center;
-	background-color: #000000;
+    margin-top: 10%;
+    height: 100%;
+    width: 100%;   
+    text-align: center;
+    background-color: #000000;
 }
 
 .jumbotron .container {
-	padding-top: 19%;
+    padding-top: 19%;
 } 
 
 .jumbotron h1 {
-	font-family: 'Play', sans-serif;
-	color: #FF7F00;
+    font-family: 'Play', sans-serif;
+    color: #FF7F00;
 }
 .jumbotron p {
-	font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 .wrapper{background-color: black;}
 
 #title {
-	text-align: center;
-	font-weight: 100;
-	font-family: 'Play', sans serif; 
-	text-shadow: 0px 0px 20px #979797;
+    text-align: center;
+    font-weight: 100;
+    font-family: 'Play', sans serif; 
+    text-shadow: 0px 0px 20px #979797;
 }
 
 p, span, li {
-	color: #cccccc;
-	font-family: 'Open Sans', sans serif;
+    color: #cccccc;
+    font-family: 'Open Sans', sans serif;
 }
 #green{color:#238E23;}
 #yellow{color:#FF9F00;}
@@ -42,53 +42,53 @@ p, span, li {
 #red{color:red;}
 
 .app {
-	width: 100%;
-	padding-top: 90px;
-	background-color: black;
+    width: 100%;
+    padding-top: 90px;
+    background-color: black;
 }
 .phonesize {
-	width:84px;
-	height:252px;
+    width:84px;
+    height:252px;
 }
 #description{
-	text-align: justify;	
-	background-color:black;
+    text-align: justify;    
+    background-color:black;
 }
 
 
 #hovercell {
-	width: 17px;
-	height: 17px;
-	margin: 2px 2px 2px 2px;
+    width: 17px;
+    height: 17px;
+    margin: 2px 2px 2px 2px;
 }
 
 #row {
-	float: left;
-	background-color: gray;
-	width: 16px;
-	height: 16px;
-	margin: 2.5px 2.5px 2.5px 2.5px;
-	box-shadow: 1px 1px 2px white;
+    float: left;
+    background-color: gray;
+    width: 16px;
+    height: 16px;
+    margin: 2.5px 2.5px 2.5px 2.5px;
+    box-shadow: 1px 1px 2px white;
 }
 #row_alive {
-	float: left;
-	background-color: white;
-	width: 16px;
-	height: 16px;
-	margin: 2.5px 2.5px 2.5px 2.5px;
-	box-shadow: 1px 1px 2px white;
+    float: left;
+    background-color: white;
+    width: 16px;
+    height: 16px;
+    margin: 2.5px 2.5px 2.5px 2.5px;
+    box-shadow: 1px 1px 2px white;
 }
 
 button span {
-	color: white;
+    color: white;
 }
 
 button {
-	position: relative;
-	border-radius: 100%;
-	width: 50px;
-	height: 50px;
-	background-color: black;
+    position: relative;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    background-color: black;
 }
 #stepbtn{
 }
@@ -98,20 +98,20 @@ button {
 }
 
 button:hover {
-	box-shadow: 0px 0px 4px gray;
+    box-shadow: 0px 0px 4px gray;
 }
 
 
 #first_summary {
-	font-size: 18px;
-	text-align: justify;
-	margin-left: 21%;
-	margin-right: 21%;
-	width: 630px;
+    font-size: 18px;
+    text-align: justify;
+    margin-left: 21%;
+    margin-right: 21%;
+    width: 630px;
 }
 p a:hover, p a:visited, p a:link {
-	text-decoration: none;
-	color: white;
-	text-shadow: 0px 0px 1px white;
+    text-decoration: none;
+    color: white;
+    text-shadow: 0px 0px 1px white;
 }
 
