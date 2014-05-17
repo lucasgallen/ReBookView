@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block main %}
+    <div class="contact">
+        <h2>What's Up?</h2>
+        <h1>Contact Me</h1>
+
+        <form>
+            <label for="subject">subject</label><input type="text" name="subject" id="subject"> 
+            <label for="message">message</label><textarea rows="10" name="message" id="message"></textarea>
+
+            <fieldset class="captcha">
+                <form method="post" action="mail.php">
+                    <?php
+                        require_once('recaptchalib.php');
+                        $publickey = "6LeStugSAAAAAOXVNzkPK_-ocGUe4_49k8PbxMVQ"; 
+                        echo recaptcha_get_html($publickey);
+                    ?>
+                    <script type="text/javascript" src="http://www.google.com/recaptcha/api/challenge?k=6LeStugSAAAAAOXVNzkPK_-ocGUe4_49k8PbxMVQ">
+                    </script>
+                    <noscript>
+                        <iframe src="http://www.google.com/recaptcha/api/noscript?k=6LeStugSAAAAAOXVNzkPK_-ocGUe4_49k8PbxMVQ" height="300" width="500" frameborder="0"></iframe>
+                        <textarea name="recaptcha_challenge_field" rows="3" cols="40"></textarea>
+                        <input type="hidden" name="recaptcha_response_field" value="manual_challenge">
+                    </noscript> 
+                 </form>
+            </fieldset>
+            <button type="submit">send</button>
+        </form>
+    </div>
+{% endblock main %}

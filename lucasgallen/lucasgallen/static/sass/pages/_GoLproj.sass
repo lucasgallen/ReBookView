@@ -1,0 +1,96 @@
+@import "compass/css3/transition"
+
+*
+  z-index: 2
+
+body
+  overflow: auto
+
+section.game-of-life
+  height: 1020px
+  overflow: hidden
+  position: fixed
+  top: 4rem
+  width: 1200px
+  z-index: 1
+  .fence
+    div
+      height: 18px
+      float: left
+      width: 18px
+  .living-cell, .dead-cell
+    border: 1px solid rgb(3, 53, 2)
+  .living-cell
+    background: #238e23 
+  .dead-cell
+    background: black
+
+section.introduction
+  @include transition(opacity 1s)
+  background: black
+  height: 100%
+  opacity: 1
+  position: absolute
+  top: 0
+  width: 100%
+  z-index: 3
+  img
+    left: 45%
+    position: relative
+    top: 45rem
+    width: 100px
+  .loaded &
+    opacity: 0
+
+section.game-overview
+  height: 100%
+  position: relative
+  width: 100%
+  z-index: 2
+
+aside.how-to-play
+  font-size: 1.7rem
+  position: relative
+  padding: 1rem
+  width: 25%
+  z-index: 2
+
+  p
+    color: black
+    text-align: justify
+aside.right-aside
+  background: #3299cc
+  float: right 
+  z-index: 2
+aside.left-aside
+  background: #ca7e00
+  float: left
+  z-index: 2
+
+button
+  background: #238e23
+  border: 0
+  border-radius: 0
+  color: white
+  margin: 0 auto 1rem
+  max-width: 8rem
+  width: 100%
+
+article.rules
+  clear: both
+  font-size: 1.7rem
+  height: 100%
+  position: relative
+  margin: 0 auto
+  max-width: 85rem
+  width: 100%
+  z-index: 2
+  h1,p,ul
+    line-height: 3rem
+  ul
+    color: white
+    display: block
+    margin: 0 auto
+    max-width: 50rem
+  p
+    text-align: justify

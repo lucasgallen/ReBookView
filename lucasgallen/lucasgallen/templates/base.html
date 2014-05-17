@@ -1,0 +1,48 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Lucas' Portfolio</title>
+
+    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}stylesheets/styles.css">
+
+</head>
+
+<body>
+    <nav>
+        <h1 class="name">
+            <span class="color-one">l</span> <span class="color-two">u</span> <span class="color-three">c</span> <span class="color-two">a</span> <span class="color-one">s</span>  <span class="color-four">G</span>  <span class="color-three">a</span> <span class="color-two">l</span> <span class="color-two">l</span> <span class="color-one">e</span> <span class="color-three">n</span>
+        </h1>
+        <ul class="site-menu">
+            <li> <h2><a href="/home">home</a></h2> </li>
+            <li> <h2><a href="/home#about">about</a></h2> </li>
+            <li> <h2><a href="/interests">interests</a></h2> </li>
+            <li> <h2><a href="/contact">contact</a></h2> </li>
+        </ul>
+
+        <ul class="projects-menu">
+            <li class="projects-trigger"><h2>projects</h2>
+                <ul class="projects">
+                    <li><a href="/gameoflife">Conway's Game of Life</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    {% block main %}
+    {% endblock main %}
+
+    <div ng-app="lifeApp" ng-controller="Life">
+        {% block gameoflife %}
+        {% endblock gameoflife %}
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    {% block script %}
+    {% endblock script %}
+    
+</body>
+</html>

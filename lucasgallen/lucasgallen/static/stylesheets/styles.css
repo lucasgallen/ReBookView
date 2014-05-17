@@ -1,0 +1,716 @@
+/* line 3, ../sass/pages/_home.sass */
+.home {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* line 7, ../sass/pages/_home.sass */
+section.welcome {
+  height: 100%;
+  margin: 0 auto;
+  max-width: 100rem;
+  padding-top: 4.5rem;
+  width: 100%;
+}
+/* line 13, ../sass/pages/_home.sass */
+section.welcome p {
+  color: #444444;
+  font-size: 2rem;
+}
+
+/* line 17, ../sass/pages/_home.sass */
+#continue, #back {
+  background-color: #428bca;
+  border: 1px solid #357ebd;
+  border-radius: 0;
+  color: white;
+  font-size: 18px;
+  line-height: 1.33em;
+  max-width: 10.8rem;
+  padding: 0 16px;
+}
+
+/* line 27, ../sass/pages/_home.sass */
+article.about-me {
+  height: 100%;
+  line-height: 3rem;
+  width: 100%;
+}
+/* line 31, ../sass/pages/_home.sass */
+article.about-me h1 {
+  color: white;
+}
+/* line 33, ../sass/pages/_home.sass */
+article.about-me h2 {
+  font-size: 2rem;
+  text-align: left;
+}
+/* line 36, ../sass/pages/_home.sass */
+article.about-me span {
+  color: #444444;
+  font-size: 2.5rem;
+}
+/* line 39, ../sass/pages/_home.sass */
+article.about-me p {
+  font-size: 1.8rem;
+  text-align: justify;
+}
+
+/* line 1, ../sass/pages/_contact.sass */
+.contact {
+  padding: 4.5rem 0 0;
+  margin: 0 auto;
+  max-width: 97rem;
+}
+/* line 5, ../sass/pages/_contact.sass */
+.contact h2 {
+  font-size: 3rem;
+}
+/* line 7, ../sass/pages/_contact.sass */
+.contact h1 {
+  font-size: 2rem;
+}
+/* line 9, ../sass/pages/_contact.sass */
+.contact form {
+  background: #238e23;
+  padding: 1rem;
+  margin: 0 auto;
+  max-width: 60rem;
+}
+/* line 14, ../sass/pages/_contact.sass */
+.contact form label, .contact form input, .contact form textarea {
+  display: block;
+  margin: 0 0 2rem 3rem;
+}
+/* line 17, ../sass/pages/_contact.sass */
+.contact form textarea {
+  width: 90%;
+}
+/* line 19, ../sass/pages/_contact.sass */
+.contact button[type="submit"] {
+  background: #ff9f00;
+  border: 0;
+  border-radius: 0;
+  color: white;
+  width: 10rem;
+}
+/* line 26, ../sass/pages/_contact.sass */
+.contact label {
+  color: white;
+  font-size: 2rem;
+}
+/* line 30, ../sass/pages/_contact.sass */
+.contact fieldset.captcha {
+  background: white;
+  display: block;
+  height: 14rem;
+  margin: 0 auto;
+  width: 31.8rem;
+}
+
+/* line 5, ../sass/pages/_interests.sass */
+body {
+  overflow: auto;
+}
+
+/* line 8, ../sass/pages/_interests.sass */
+nav {
+  z-index: 10;
+}
+
+/* line 11, ../sass/pages/_interests.sass */
+section.carousel {
+  height: 50%;
+  position: relative;
+  top: 4rem;
+  width: 100%;
+}
+/* line 16, ../sass/pages/_interests.sass */
+section.carousel ul {
+  -webkit-transition: left 0.2s;
+  -moz-transition: left 0.2s;
+  -o-transition: left 0.2s;
+  transition: left 0.2s;
+  display: block;
+  height: 300px;
+  left: 0;
+  position: relative;
+  width: 2520px;
+}
+/* line 23, ../sass/pages/_interests.sass */
+section.carousel li {
+  display: block;
+  height: 300px;
+  float: left;
+  position: relative;
+  margin-left: 1.5rem;
+  width: 600px;
+}
+/* line 30, ../sass/pages/_interests.sass */
+section.carousel li img {
+  display: block;
+}
+/* line 32, ../sass/pages/_interests.sass */
+section.carousel div.carousel-container {
+  height: 300px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 2rem 0;
+  position: relative;
+  width: 630px;
+}
+/* line 40, ../sass/pages/_interests.sass */
+section.carousel .next-button {
+  height: 300px;
+  position: absolute;
+  width: 3rem;
+  z-index: 3;
+}
+/* line 45, ../sass/pages/_interests.sass */
+section.carousel .next-button img {
+  cursor: pointer;
+  position: relative;
+  top: 12rem;
+}
+/* line 50, ../sass/pages/_interests.sass */
+section.carousel #right-control {
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, transparent), color-stop(100%, #000000));
+  background-image: -webkit-linear-gradient(left, transparent, #000000);
+  background-image: -moz-linear-gradient(left, transparent, #000000);
+  background-image: -o-linear-gradient(left, transparent, #000000);
+  background-image: linear-gradient(left, transparent, #000000);
+  right: 1.5rem;
+}
+/* line 53, ../sass/pages/_interests.sass */
+section.carousel #right-control img {
+  -webkit-transform: rotate(0.5turn);
+  -moz-transform: rotate(0.5turn);
+  -ms-transform: rotate(0.5turn);
+  -o-transform: rotate(0.5turn);
+  transform: rotate(0.5turn);
+}
+/* line 56, ../sass/pages/_interests.sass */
+section.carousel #left-control {
+  background-image: -webkit-gradient(linear, 100% 50%, 0% 50%, color-stop(0%, transparent), color-stop(100%, #000000));
+  background-image: -webkit-linear-gradient(right, transparent, #000000);
+  background-image: -moz-linear-gradient(right, transparent, #000000);
+  background-image: -o-linear-gradient(right, transparent, #000000);
+  background-image: linear-gradient(right, transparent, #000000);
+  left: 1.5rem;
+}
+/* line 59, ../sass/pages/_interests.sass */
+section.carousel #left-control img {
+  left: -2rem;
+}
+
+/* line 62, ../sass/pages/_interests.sass */
+section.gallery {
+  height: 1356px;
+  padding: 5rem 0;
+  position: relative;
+  margin: 4rem auto 0;
+  width: 960px;
+}
+/* line 68, ../sass/pages/_interests.sass */
+section.gallery .book {
+  -webkit-transition: border 0.5s;
+  -moz-transition: border 0.5s;
+  -o-transition: border 0.5s;
+  transition: border 0.5s;
+  border-right: 0 solid white;
+  height: 452px;
+  float: left;
+  position: relative;
+  width: 300px;
+}
+/* line 75, ../sass/pages/_interests.sass */
+section.gallery .book:hover {
+  -webkit-transition: border 0.5s;
+  -moz-transition: border 0.5s;
+  -o-transition: border 0.5s;
+  transition: border 0.5s;
+  border-right: 3px solid white;
+  margin-bottom: 0;
+}
+/* line 79, ../sass/pages/_interests.sass */
+section.gallery .book > img {
+  height: 452px;
+  position: absolute;
+  width: 300px;
+}
+
+/* line 107, ../sass/pages/_interests.sass */
+#the-dresden-files {
+  height: 452px;
+  overflow: hidden;
+  position: relative;
+  width: 300px;
+}
+/* line 112, ../sass/pages/_interests.sass */
+#the-dresden-files img {
+  -webkit-transition: right 0.5s, top 0.5s;
+  -webkit-transition-delay: 0s, 0.5s;
+  -moz-transition: right 0.5s, top 0.5s 0.5s;
+  -o-transition: right 0.5s, top 0.5s 0.5s;
+  transition: right 0.5s, top 0.5s 0.5s;
+  height: auto;
+  position: relative;
+  top: -30px;
+  right: 11px;
+  width: auto;
+}
+
+/* line 121, ../sass/pages/_interests.sass */
+#a-song-of-ice-and-fire img[data-book="1"] {
+  opacity: 1;
+}
+/* line 123, ../sass/pages/_interests.sass */
+#a-song-of-ice-and-fire img {
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
+  opacity: 0;
+}
+
+/* line 127, ../sass/pages/_interests.sass */
+section.map-box {
+  height: 100%;
+  margin: 8rem auto 0;
+  max-width: 100rem;
+  position: relative;
+}
+
+/* line 132, ../sass/pages/_interests.sass */
+div.map-ui-container {
+  height: 10%;
+  margin: 0 auto;
+  max-width: 100rem;
+  position: relative;
+}
+
+/* line 138, ../sass/pages/_interests.sass */
+.map-filter {
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  width: 60rem;
+}
+/* line 143, ../sass/pages/_interests.sass */
+.map-filter a {
+  display: block;
+  font-size: 3rem;
+  float: left;
+  width: 20rem;
+}
+/* line 148, ../sass/pages/_interests.sass */
+.map-filter .itinerary {
+  background: white;
+  margin-left: 7.5rem;
+}
+
+/* line 152, ../sass/pages/_interests.sass */
+#map {
+  height: 80%;
+  margin: 0 auto;
+  max-width: 100rem;
+  position: relative;
+}
+
+/* line 157, ../sass/pages/_interests.sass */
+#new-york {
+  background: green;
+}
+
+/* line 159, ../sass/pages/_interests.sass */
+#miami {
+  background: orange;
+}
+
+/* line 161, ../sass/pages/_interests.sass */
+#san-fran {
+  background: #a85353;
+}
+
+/* line 3, ../sass/pages/_GoLproj.sass */
+* {
+  z-index: 2;
+}
+
+/* line 6, ../sass/pages/_GoLproj.sass */
+body {
+  overflow: auto;
+}
+
+/* line 9, ../sass/pages/_GoLproj.sass */
+section.game-of-life {
+  height: 1020px;
+  overflow: hidden;
+  position: fixed;
+  top: 4rem;
+  width: 1200px;
+  z-index: 1;
+}
+/* line 17, ../sass/pages/_GoLproj.sass */
+section.game-of-life .fence div {
+  height: 18px;
+  float: left;
+  width: 18px;
+}
+/* line 21, ../sass/pages/_GoLproj.sass */
+section.game-of-life .living-cell, section.game-of-life .dead-cell {
+  border: 1px solid #033502;
+}
+/* line 23, ../sass/pages/_GoLproj.sass */
+section.game-of-life .living-cell {
+  background: #238e23;
+}
+/* line 25, ../sass/pages/_GoLproj.sass */
+section.game-of-life .dead-cell {
+  background: black;
+}
+
+/* line 28, ../sass/pages/_GoLproj.sass */
+section.introduction {
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
+  background: black;
+  height: 100%;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+}
+/* line 37, ../sass/pages/_GoLproj.sass */
+section.introduction img {
+  left: 45%;
+  position: relative;
+  top: 45rem;
+  width: 100px;
+}
+/* line 42, ../sass/pages/_GoLproj.sass */
+.loaded section.introduction {
+  opacity: 0;
+}
+
+/* line 45, ../sass/pages/_GoLproj.sass */
+section.game-overview {
+  height: 100%;
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
+
+/* line 51, ../sass/pages/_GoLproj.sass */
+aside.how-to-play {
+  font-size: 1.7rem;
+  position: relative;
+  padding: 1rem;
+  width: 25%;
+  z-index: 2;
+}
+/* line 58, ../sass/pages/_GoLproj.sass */
+aside.how-to-play p {
+  color: black;
+  text-align: justify;
+}
+
+/* line 61, ../sass/pages/_GoLproj.sass */
+aside.right-aside {
+  background: #3299cc;
+  float: right;
+  z-index: 2;
+}
+
+/* line 65, ../sass/pages/_GoLproj.sass */
+aside.left-aside {
+  background: #ca7e00;
+  float: left;
+  z-index: 2;
+}
+
+/* line 70, ../sass/pages/_GoLproj.sass */
+button {
+  background: #238e23;
+  border: 0;
+  border-radius: 0;
+  color: white;
+  margin: 0 auto 1rem;
+  max-width: 8rem;
+  width: 100%;
+}
+
+/* line 79, ../sass/pages/_GoLproj.sass */
+article.rules {
+  clear: both;
+  font-size: 1.7rem;
+  height: 100%;
+  position: relative;
+  margin: 0 auto;
+  max-width: 85rem;
+  width: 100%;
+  z-index: 2;
+}
+/* line 88, ../sass/pages/_GoLproj.sass */
+article.rules h1, article.rules p, article.rules ul {
+  line-height: 3rem;
+}
+/* line 90, ../sass/pages/_GoLproj.sass */
+article.rules ul {
+  color: white;
+  display: block;
+  margin: 0 auto;
+  max-width: 50rem;
+}
+/* line 95, ../sass/pages/_GoLproj.sass */
+article.rules p {
+  text-align: justify;
+}
+
+/* line 17, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 5, ../sass/layout/_global.sass */
+html {
+  background: black;
+  font-size: 62.4%;
+  height: 100%;
+}
+
+/* line 9, ../sass/layout/_global.sass */
+body {
+  height: 100%;
+}
+
+/* line 11, ../sass/layout/_global.sass */
+p, h1, h2 {
+  color: white;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* line 16, ../sass/layout/_global.sass */
+a:active, a:visited, a:hover, a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* line 19, ../sass/layout/_global.sass */
+h1 {
+  font-size: 4rem;
+}
+
+/* line 22, ../sass/layout/_global.sass */
+button {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+  display: block;
+  height: 4rem;
+  margin: 0 auto;
+}
+
+/* line 28, ../sass/layout/_global.sass */
+.color-one {
+  color: #238e23;
+}
+
+/* line 30, ../sass/layout/_global.sass */
+.color-two {
+  color: #ff9f00;
+}
+
+/* line 32, ../sass/layout/_global.sass */
+.color-three {
+  color: #3299cc;
+}
+
+/* line 34, ../sass/layout/_global.sass */
+.color-four {
+  color: red;
+}
+
+/* line 37, ../sass/layout/_global.sass */
+.border {
+  border-bottom: 1px solid white;
+  margin: 0 auto;
+  width: 5rem;
+}
+
+/* line 42, ../sass/layout/_global.sass */
+div.container {
+  margin: 0 auto;
+  max-width: 97rem;
+  padding: 20% 5rem 0;
+}
+
+/* line 47, ../sass/layout/_global.sass */
+nav {
+  background: linear-gradient(to right bottom, #161616, #222222);
+  font-size: 1.8rem;
+  padding: 1rem 0 0 1rem;
+  position: fixed;
+  height: 3rem;
+  width: 100%;
+  z-index: 3;
+}
+/* line 55, ../sass/layout/_global.sass */
+nav h1, nav h2, nav ul {
+  display: inline-block;
+}
+/* line 57, ../sass/layout/_global.sass */
+nav h1 {
+  float: left;
+  font-size: 2rem;
+  margin-right: 2rem;
+}
+/* line 61, ../sass/layout/_global.sass */
+nav h2 {
+  margin: 0 2rem;
+}
+/* line 63, ../sass/layout/_global.sass */
+nav ul.projects-menu {
+  float: right;
+  padding: 0 4rem;
+}
+/* line 66, ../sass/layout/_global.sass */
+nav ul.projects {
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  transition: all 0.1s;
+  background: white;
+  height: 0;
+  overflow: hidden;
+  padding: 0rem;
+  position: absolute;
+  top: 4rem;
+  right: 1rem;
+}
+/* line 75, ../sass/layout/_global.sass */
+nav ul.projects:before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 0 solid transparent;
+  border-right: 0 solid transparent;
+  border-bottom: 0 solid white;
+  border-left: 0 solid transparent;
+  top: -1.8rem;
+  right: 7rem;
+}
+
+/* line 87, ../sass/layout/_global.sass */
+ul.site-menu {
+  display: block;
+  float: left;
+}
+/* line 90, ../sass/layout/_global.sass */
+ul.site-menu li {
+  display: inline-block;
+}
+/* line 92, ../sass/layout/_global.sass */
+ul.site-menu li:hover {
+  border-bottom: 3px solid white;
+}
+/* line 94, ../sass/layout/_global.sass */
+ul.site-menu h2 {
+  -webkit-transition: letter-spacing, 0.2s;
+  -moz-transition: letter-spacing, 0.2s;
+  -o-transition: letter-spacing, 0.2s;
+  transition: letter-spacing, 0.2s;
+}
+/* line 96, ../sass/layout/_global.sass */
+ul.site-menu h2:hover {
+  -webkit-transition: letter-spacing, 0.2s;
+  -moz-transition: letter-spacing, 0.2s;
+  -o-transition: letter-spacing, 0.2s;
+  transition: letter-spacing, 0.2s;
+  letter-spacing: 1rem;
+}
+
+/* line 100, ../sass/layout/_global.sass */
+.projects-trigger {
+  padding: 0.1rem;
+}
+/* line 103, ../sass/layout/_global.sass */
+.projects-trigger:hover ul.projects {
+  height: auto;
+  overflow: visible;
+  padding: 1rem;
+}
+/* line 107, ../sass/layout/_global.sass */
+.projects-trigger:hover ul.projects:before {
+  border-top: 1rem solid transparent;
+  border-right: 1rem solid transparent;
+  border-bottom: 1rem solid white;
+  border-left: 1rem solid transparent;
+}

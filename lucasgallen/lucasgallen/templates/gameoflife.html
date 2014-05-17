@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% block gameoflife %}
+
+    <section id="game-of-life" class="game-of-life">
+        <div class="fence" ng-model="cells">
+            <span ng-repeat="row in cells">
+                <span ng-repeat="cell in row">
+                    <div 
+                    ng-class="cell.lifeClass">
+                    </div>
+                </span>
+            </span>
+        </div><!--/.fence -->
+    </section>
+
+    <h1 style="
+        font-size: 7rem;
+        position: relative;
+        top: 14rem;
+        z-index: 4
+        " id="title">Conway's Game of Life</h1>
+
+    <section class="game-overview">
+        <div class="container">
+            <aside class="how-to-play left-aside">
+                <h1>Tips</h1>
+                <p>
+                    Pressing the play button below lets the game run continuously; pressing it again pauses the simulation.
+                </p>
+                <p>
+                    Note, although the grid appears as a square, as far as the cells are concerned the grid is a torus (think the surface of a donut). This structure may be familiar to those who have played Astroids.
+                </p>
+                <p>
+                    In other words, for any given row the left-most cell "neighbors" right-most cell and for any given column the top-most cell "neighbors" the bottom-most cell.
+                </p>
+               <button id="pause" ng-click="playLifeButton()">play/pause</button>
+            </aside>
+        
+            <aside class="how-to-play right-aside">
+                <h1>More</h1>
+                <p>
+                    The black squares designate dead cells and green squares designate living cells.
+                </p>
+                <p>
+                    The button below will "shuffle" the cells in the sense that a random subset of the cells will be selected to become alive.
+                </p>
+                <button id="shuffle" ng-click="randomize()">shuffle</button>
+            </aside>
+        </div>
+    </section>
+
+    <article class="rules">
+        <div class="container">
+            <h1><span class="color-two">R</span><span class="color-four">u</span><span class="color-one">l</span><span class="color-two">e</span><span class="color-three">s</span></h1>
+    
+            <p>Conway's Game of Life is a simulation that operates on four very simple rules:</p>
+    
+            <ul>
+                <li>If the cell is alive and if the cell has either two or three neighbors, then the cell lives to the next generation.</li>
+                <br>
+                <li>If the cell is alive and the cell only has one or fewer neighbors, then the cell dies.</li>
+                <br>
+                <li>If the cell is alive and the cell has four or more neighbors, then the cell dies.</li>
+                <br>
+                <li>If the cell is dead and the cell has exactly three neighbros, then the cell is born into the next generation.</li>
+                <br>
+            </ul>
+    
+            <p>Here we consider a "neighbor" to be a living cell that is adjacent (including diagonally so) to the cell in question.</p>
+            <p>
+                Conway's Game is interesting because of how complex the simulation can get with a comparatively simple set of rules. To me this is has much to do with the mystery of life and the "ghost in the shell"; it's a clue to the question, "what is consciousness?" Before I get a bit too philosophical here, check out the work of Douglas Hofstadter. In particular, I Am a Strange Loop and G&ouml;del, Escher, Bach: an Eternal Golden Braid are of interest here.
+            </p>
+        </div>
+    </article>
+
+{% endblock gameoflife %}
+
+{% block script %}
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.min.js"></script>
+    <script src="../static/javascript/gameOfLife.js"></script>
+    <script src="../static/javascript/GoLproject.js"></script>
+{% endblock script %}
