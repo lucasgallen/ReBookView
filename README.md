@@ -1,6 +1,5 @@
 mywebsite
 =========
-Above are the HTML, CSS, and JavaScript files used in the development of my website. Feel free to explore them
-to understand how I developed my website and the app therein.
+I'm now moving on to greener pastures! Currently I'm developing my skills in backend web development and as a part of that process, I've restructured my site using Django.
 
-If you wish to see the final product, please visit the page: http://www.lucasgallen.com
+Following these changes should be more features to the site.
