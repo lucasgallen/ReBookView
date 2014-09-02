@@ -808,4 +808,27 @@ ul.site-menu h2:hover {
     float: right;
     margin: 1rem 1rem 1rem 0;
   }
+
+  /* line 58, ../sass/media/_320px.sass */
+  div[ng-app="lifeApp"] {
+    padding: 4rem 0 0;
+  }
+  /* line 60, ../sass/media/_320px.sass */
+  div[ng-app="lifeApp"] > h1 {
+    margin: 11rem auto 1rem;
+    width: 30rem;
+  }
+  /* line 63, ../sass/media/_320px.sass */
+  div[ng-app="lifeApp"] aside.how-to-play {
+    float: none;
+    width: auto;
+  }
+  /* line 66, ../sass/media/_320px.sass */
+  div[ng-app="lifeApp"] aside.left-aside {
+    margin-bottom: 30rem;
+  }
+  /* line 69, ../sass/media/_320px.sass */
+  div[ng-app="lifeApp"] .game-overview .container {
+    padding: 5rem 3rem 0;
+  }
 }
