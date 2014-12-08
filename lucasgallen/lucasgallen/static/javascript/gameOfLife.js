@@ -29,7 +29,7 @@
         // and columns to make easy changes
         // if neccessary
         $scope.numRows = 51;
-        $scope.numColumns = 60;
+        $scope.numColumns = 59;
     
         // Initializer for the 2D array
         // of cells
