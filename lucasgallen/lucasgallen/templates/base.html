@@ -36,10 +36,8 @@
     {% block main %}
     {% endblock main %}
 
-    <div ng-app="lifeApp" ng-controller="Life">
-        {% block gameoflife %}
-        {% endblock gameoflife %}
-    </div>
+    {% block gameoflife %}
+    {% endblock gameoflife %}
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
