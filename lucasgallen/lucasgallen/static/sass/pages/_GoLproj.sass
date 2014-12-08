@@ -46,9 +46,12 @@ section.introduction
 
 section.game-overview
   height: 100%
+  margin: 0 0 100%
   position: relative
   width: 100%
   z-index: 2
+  .container
+    overflow: hidden
 
 aside.how-to-play
   font-size: 1.7rem
@@ -87,6 +90,9 @@ article.rules
   max-width: 85rem
   width: 100%
   z-index: 2
+  .container
+    background-color: rgba(0, 0, 0, 0.5)
+    opacity: 0.75
   h1,p,ul
     line-height: 3rem
   ul
