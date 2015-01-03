@@ -34,23 +34,24 @@ section.welcome p {
 article.about-me {
   height: 100%;
   line-height: 3rem;
+  overflow-y: scroll;
   width: 100%;
 }
-/* line 31, ../sass/pages/_home.sass */
+/* line 32, ../sass/pages/_home.sass */
 article.about-me h1 {
   color: white;
 }
-/* line 33, ../sass/pages/_home.sass */
+/* line 34, ../sass/pages/_home.sass */
 article.about-me h2 {
   font-size: 2rem;
   text-align: left;
 }
-/* line 36, ../sass/pages/_home.sass */
+/* line 37, ../sass/pages/_home.sass */
 article.about-me span {
   color: #444444;
   font-size: 2.5rem;
 }
-/* line 39, ../sass/pages/_home.sass */
+/* line 40, ../sass/pages/_home.sass */
 article.about-me p {
   font-size: 1.8rem;
   text-align: justify;
@@ -340,11 +341,17 @@ div.map-ui-container {
 }
 
 /* line 6, ../sass/pages/_GoLproj.sass */
-body {
+body.game-of-life-app {
   overflow: auto;
 }
-
 /* line 9, ../sass/pages/_GoLproj.sass */
+body.game-of-life-app div[ng-app="lifeApp"] > h1 {
+  font-family: "Rubik Mono One", sans-serif;
+  padding-top: 13rem;
+  position: relative;
+}
+
+/* line 14, ../sass/pages/_GoLproj.sass */
 section.game-of-life {
   height: 1020px;
   left: 50%;
@@ -355,26 +362,26 @@ section.game-of-life {
   width: 120rem;
   z-index: 1;
 }
-/* line 19, ../sass/pages/_GoLproj.sass */
+/* line 24, ../sass/pages/_GoLproj.sass */
 section.game-of-life .fence div {
   height: 18px;
   float: left;
   width: 18px;
 }
-/* line 23, ../sass/pages/_GoLproj.sass */
+/* line 28, ../sass/pages/_GoLproj.sass */
 section.game-of-life .living-cell, section.game-of-life .dead-cell {
   border: 1px solid #033502;
 }
-/* line 25, ../sass/pages/_GoLproj.sass */
+/* line 30, ../sass/pages/_GoLproj.sass */
 section.game-of-life .living-cell {
   background: #238e23;
 }
-/* line 27, ../sass/pages/_GoLproj.sass */
+/* line 32, ../sass/pages/_GoLproj.sass */
 section.game-of-life .dead-cell {
   background: black;
 }
 
-/* line 30, ../sass/pages/_GoLproj.sass */
+/* line 35, ../sass/pages/_GoLproj.sass */
 section.introduction {
   -webkit-transition: opacity 1s;
   -moz-transition: opacity 1s;
@@ -388,19 +395,19 @@ section.introduction {
   width: 100%;
   z-index: 3;
 }
-/* line 39, ../sass/pages/_GoLproj.sass */
+/* line 44, ../sass/pages/_GoLproj.sass */
 section.introduction img {
   left: 45%;
   position: relative;
   top: 45rem;
   width: 100px;
 }
-/* line 44, ../sass/pages/_GoLproj.sass */
+/* line 49, ../sass/pages/_GoLproj.sass */
 .loaded section.introduction {
   opacity: 0;
 }
 
-/* line 47, ../sass/pages/_GoLproj.sass */
+/* line 52, ../sass/pages/_GoLproj.sass */
 section.game-overview {
   height: 100%;
   margin: 0 0 100%;
@@ -408,40 +415,48 @@ section.game-overview {
   width: 100%;
   z-index: 2;
 }
-/* line 53, ../sass/pages/_GoLproj.sass */
+/* line 58, ../sass/pages/_GoLproj.sass */
 section.game-overview .container {
   overflow: hidden;
 }
 
-/* line 56, ../sass/pages/_GoLproj.sass */
+/* line 61, ../sass/pages/_GoLproj.sass */
 aside.how-to-play {
   font-size: 1.7rem;
+  min-height: 28rem;
   position: relative;
   padding: 1rem;
   width: 25%;
   z-index: 2;
 }
-/* line 63, ../sass/pages/_GoLproj.sass */
+/* line 68, ../sass/pages/_GoLproj.sass */
+aside.how-to-play button {
+  bottom: 1rem;
+  left: 50%;
+  margin-left: -4rem;
+  position: absolute;
+}
+/* line 73, ../sass/pages/_GoLproj.sass */
 aside.how-to-play p {
   color: black;
   text-align: justify;
 }
 
-/* line 66, ../sass/pages/_GoLproj.sass */
+/* line 77, ../sass/pages/_GoLproj.sass */
 aside.right-aside {
   background: #3299cc;
   float: right;
   z-index: 2;
 }
 
-/* line 70, ../sass/pages/_GoLproj.sass */
+/* line 81, ../sass/pages/_GoLproj.sass */
 aside.left-aside {
   background: #ca7e00;
   float: left;
   z-index: 2;
 }
 
-/* line 75, ../sass/pages/_GoLproj.sass */
+/* line 86, ../sass/pages/_GoLproj.sass */
 button {
   background: #238e23;
   border: 0;
@@ -452,7 +467,7 @@ button {
   width: 100%;
 }
 
-/* line 84, ../sass/pages/_GoLproj.sass */
+/* line 95, ../sass/pages/_GoLproj.sass */
 article.rules {
   clear: both;
   font-size: 1.7rem;
@@ -463,23 +478,23 @@ article.rules {
   width: 100%;
   z-index: 2;
 }
-/* line 93, ../sass/pages/_GoLproj.sass */
+/* line 104, ../sass/pages/_GoLproj.sass */
 article.rules .container {
   background-color: rgba(0, 0, 0, 0.5);
   opacity: 0.75;
 }
-/* line 96, ../sass/pages/_GoLproj.sass */
+/* line 107, ../sass/pages/_GoLproj.sass */
 article.rules h1, article.rules p, article.rules ul {
   line-height: 3rem;
 }
-/* line 98, ../sass/pages/_GoLproj.sass */
+/* line 109, ../sass/pages/_GoLproj.sass */
 article.rules ul {
   color: white;
   display: block;
   margin: 0 auto;
   max-width: 50rem;
 }
-/* line 103, ../sass/pages/_GoLproj.sass */
+/* line 114, ../sass/pages/_GoLproj.sass */
 article.rules p {
   text-align: justify;
 }
@@ -552,34 +567,35 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* line 5, ../sass/layout/_global.sass */
 html {
   background: black;
+  font-family: "Noto Sans", sans-serif;
   font-size: 62.4%;
   height: 100%;
 }
 
-/* line 9, ../sass/layout/_global.sass */
+/* line 10, ../sass/layout/_global.sass */
 body {
   height: 100%;
 }
 
-/* line 11, ../sass/layout/_global.sass */
+/* line 12, ../sass/layout/_global.sass */
 p, h1, h2 {
   color: white;
   margin-bottom: 1rem;
   text-align: center;
 }
 
-/* line 16, ../sass/layout/_global.sass */
+/* line 17, ../sass/layout/_global.sass */
 a:active, a:visited, a:hover, a {
   color: inherit;
   text-decoration: none;
 }
 
-/* line 19, ../sass/layout/_global.sass */
+/* line 20, ../sass/layout/_global.sass */
 h1 {
   font-size: 4rem;
 }
 
-/* line 22, ../sass/layout/_global.sass */
+/* line 23, ../sass/layout/_global.sass */
 button {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
@@ -591,70 +607,70 @@ button {
   margin: 0 auto;
 }
 
-/* line 28, ../sass/layout/_global.sass */
+/* line 29, ../sass/layout/_global.sass */
 .color-one {
   color: #238e23;
 }
 
-/* line 30, ../sass/layout/_global.sass */
+/* line 31, ../sass/layout/_global.sass */
 .color-two {
   color: #ff9f00;
 }
 
-/* line 32, ../sass/layout/_global.sass */
+/* line 33, ../sass/layout/_global.sass */
 .color-three {
   color: #3299cc;
 }
 
-/* line 34, ../sass/layout/_global.sass */
+/* line 35, ../sass/layout/_global.sass */
 .color-four {
   color: red;
 }
 
-/* line 37, ../sass/layout/_global.sass */
+/* line 38, ../sass/layout/_global.sass */
 .border {
   border-bottom: 1px solid white;
   margin: 0 auto;
   width: 5rem;
 }
 
-/* line 42, ../sass/layout/_global.sass */
+/* line 43, ../sass/layout/_global.sass */
 div.container {
   margin: 0 auto;
   max-width: 97rem;
   padding: 20% 5rem 0;
 }
 
-/* line 47, ../sass/layout/_global.sass */
+/* line 48, ../sass/layout/_global.sass */
 nav {
   background: linear-gradient(to right bottom, #161616, #222222);
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   padding: 1rem 0 0 1rem;
   position: fixed;
   height: 3rem;
   width: 100%;
   z-index: 3;
 }
-/* line 55, ../sass/layout/_global.sass */
+/* line 56, ../sass/layout/_global.sass */
 nav h1, nav h2, nav ul {
   display: inline-block;
 }
-/* line 57, ../sass/layout/_global.sass */
+/* line 58, ../sass/layout/_global.sass */
 nav h1 {
   float: left;
   font-size: 2rem;
   margin-right: 2rem;
 }
-/* line 61, ../sass/layout/_global.sass */
+/* line 62, ../sass/layout/_global.sass */
 nav h2 {
   margin: 0 2rem;
 }
-/* line 63, ../sass/layout/_global.sass */
+/* line 64, ../sass/layout/_global.sass */
 nav ul.projects-menu {
   float: right;
   padding: 0 4rem;
 }
-/* line 66, ../sass/layout/_global.sass */
+/* line 67, ../sass/layout/_global.sass */
 nav ul.projects {
   -webkit-transition: all 0.1s;
   -moz-transition: all 0.1s;
@@ -668,7 +684,7 @@ nav ul.projects {
   top: 4rem;
   right: 1rem;
 }
-/* line 75, ../sass/layout/_global.sass */
+/* line 76, ../sass/layout/_global.sass */
 nav ul.projects:before {
   position: absolute;
   content: "";
@@ -682,31 +698,31 @@ nav ul.projects:before {
   right: 7rem;
 }
 
-/* line 87, ../sass/layout/_global.sass */
+/* line 88, ../sass/layout/_global.sass */
 ul.site-menu {
   display: block;
   float: left;
 }
-/* line 90, ../sass/layout/_global.sass */
+/* line 91, ../sass/layout/_global.sass */
 ul.site-menu li {
   display: inline-block;
 }
-/* line 92, ../sass/layout/_global.sass */
+/* line 93, ../sass/layout/_global.sass */
 ul.site-menu li:hover {
   border-bottom: 3px solid white;
 }
-/* line 94, ../sass/layout/_global.sass */
+/* line 95, ../sass/layout/_global.sass */
 ul.site-menu li:first-child {
   display: none;
 }
-/* line 96, ../sass/layout/_global.sass */
+/* line 97, ../sass/layout/_global.sass */
 ul.site-menu h2 {
   -webkit-transition: letter-spacing, 0.2s;
   -moz-transition: letter-spacing, 0.2s;
   -o-transition: letter-spacing, 0.2s;
   transition: letter-spacing, 0.2s;
 }
-/* line 98, ../sass/layout/_global.sass */
+/* line 99, ../sass/layout/_global.sass */
 ul.site-menu h2:hover {
   -webkit-transition: letter-spacing, 0.2s;
   -moz-transition: letter-spacing, 0.2s;
@@ -715,17 +731,17 @@ ul.site-menu h2:hover {
   letter-spacing: 1rem;
 }
 
-/* line 102, ../sass/layout/_global.sass */
+/* line 103, ../sass/layout/_global.sass */
 .projects-trigger {
   padding: 0.1rem;
 }
-/* line 105, ../sass/layout/_global.sass */
+/* line 106, ../sass/layout/_global.sass */
 .projects-trigger:hover ul.projects {
   height: auto;
   overflow: visible;
   padding: 1rem;
 }
-/* line 109, ../sass/layout/_global.sass */
+/* line 110, ../sass/layout/_global.sass */
 .projects-trigger:hover ul.projects:before {
   border-top: 1rem solid transparent;
   border-right: 1rem solid transparent;
