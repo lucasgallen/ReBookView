@@ -3,8 +3,13 @@
 *
   z-index: 2
 
-body
+body.game-of-life-app
   overflow: auto
+  div[ng-app="lifeApp"]
+    > h1
+      font-family: 'Rubik Mono One', sans-serif
+      padding-top: 13rem
+      position: relative
 
 section.game-of-life
   height: 1020px

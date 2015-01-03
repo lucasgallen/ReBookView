@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% block page %}game-of-life-app{% endblock page %}
 {% block gameoflife %}
     <div ng-app="lifeApp" ng-controller="Life">
         <section id="game-of-life" class="game-of-life">
@@ -13,7 +14,7 @@
             </div><!--/.fence -->
         </section>
 
-        <h1 id="title">Conway's Game of Life</h1>
+        <h1>Conway's Game of Life</h1>
 
         <section class="game-overview">
             <div class="container">

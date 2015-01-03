@@ -7,11 +7,12 @@
     <title>Lucas' Portfolio</title>
     <meta name="viewport" content="width=device-width">
 
+    <link href='http://fonts.googleapis.com/css?family=Noto+Sans|Rubik+Mono+One' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}stylesheets/styles.css">
 
 </head>
 
-<body>
+<body class="{% block page %}{% endblock page %}">
     <nav>
         <h1 class="name">
             <span class="color-one">l</span> <span class="color-two">u</span> <span class="color-three">c</span> <span class="color-two">a</span> <span class="color-one">s</span>  <span class="color-four">G</span>  <span class="color-three">a</span> <span class="color-two">l</span> <span class="color-two">l</span> <span class="color-one">e</span> <span class="color-three">n</span>
