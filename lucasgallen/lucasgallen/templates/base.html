@@ -17,15 +17,19 @@
         <h1 class="name">
             <span class="color-one">l</span> <span class="color-two">u</span> <span class="color-three">c</span> <span class="color-two">a</span> <span class="color-one">s</span>  <span class="color-four">G</span>  <span class="color-three">a</span> <span class="color-two">l</span> <span class="color-two">l</span> <span class="color-one">e</span> <span class="color-three">n</span>
         </h1>
+
+        <a id="small-menu-toggle" class="small-menu-toggle">&#9776;</a>
+
         <ul class="site-menu">
-            <li> <h2>CLICK</h2> </li>
             <li> <h2><a href="/home">home</a></h2> </li>
             <li> <h2><a href="/interests">interests</a></h2> </li>
             <li> <h2><a href="/contact">contact</a></h2> </li>
+            <li class="small-menu-item"> <h2><a href="/gameoflife">Conway's Game of Life</a></h2> </li>
         </ul>
 
         <ul class="projects-menu">
-            <li class="projects-trigger"><h2>projects</h2>
+            <li class="projects-trigger">
+                <h2>projects</h2>
                 <ul class="projects">
                     <li><a href="/gameoflife">Conway's Game of Life</a></li>
                 </ul>
@@ -40,6 +44,7 @@
     {% endblock gameoflife %}
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="{{ STATIC_URL }}javascript/global.js"></script>
 
     {% block script %}
     {% endblock script %}

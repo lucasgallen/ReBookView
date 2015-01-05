@@ -1,0 +1,33 @@
+@import "compass/css3/transition"
+
+@media(max-width: 720px)
+  .small-menu-toggle
+    color: white
+    cursor: pointer
+    display: block
+    height: 3rem
+    float: right
+    line-height: 2rem
+    margin-right: 4rem
+    text-align: center
+    text-decoration: none
+    width: 3rem
+  ul.projects-menu
+    display: none
+  ul.site-menu
+    @include transition(height 0.5s)
+    background: linear-gradient( to left bottom, #222, rgba(22,22,22,1))
+    clear: left
+    height: 0
+    float: left
+    margin-left: -1rem
+    overflow: hidden
+    width: auto
+    .small-menu-item
+      display: inline-block
+    li
+      display: block
+      margin-bottom: 1rem
+  ul.site-menu.active
+    @include transition(height 0.5s)
+    height: 12rem
