@@ -9,6 +9,7 @@ nav
   z-index: 10
 
 section.carousel
+  display: none
   height: 50%
   position: relative
   top: 4rem
@@ -64,46 +65,28 @@ section.gallery
   overflow: hidden
   padding: 5rem 0
   position: relative
-  margin: 4rem auto 0
-  width: 960px
+  width: 900px
   .book
-    @include transition(border 0.5s)
     border-right: 0 solid white
     height: 452px
     float: left
     position: relative
     width: 300px
-    &:hover
-      @include transition(border 0.5s)
-      border-right: 3px solid white
-      margin-bottom: 0
     > img
       height: 452px
       position: absolute
       width: 300px
-
-//      &:after
-//        border-bottom: 2rem solid transparent
-//        border-left: 2rem solid transparent
-//        border-right: 2rem solid white
-//        border-top: 2rem solid transparent
-//        content: ""
-//        height: 0
-//        float: right
-//        position: relative
-//        top: 20rem
-//        width: 0
-//      &:before
-//        border: 2px solid white
-//        color: white
-//        content: ""
-//        font-size: 2rem
-//        padding: 1rem
-//        position: absolute 
-//        right: 3rem
-//        top: 19.7rem
-//        z-index: 1
-
+    .caption-overlay
+      background: rgba(0, 0, 0, .7)
+      height: 100%
+      opacity: 0
+      padding: 10rem 0 0
+      position: absolute
+      top: 0
+      width: 100%
+      &:hover
+        @include transition(opacity 0.5s)
+        opacity: 1
 
 #the-dresden-files
   height: 452px
