@@ -56,6 +56,27 @@ article.about-me p {
   font-size: 1.8rem;
   text-align: justify;
 }
+/* line 43, ../sass/pages/_home.sass */
+article.about-me .container {
+  padding: 7rem 10% 2rem;
+}
+
+/* line 46, ../sass/pages/_home.sass */
+#overlay.contact {
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+}
+/* line 54, ../sass/pages/_home.sass */
+#overlay.contact .contact-information {
+  margin: 0 auto;
+  max-width: 25rem;
+  padding: 8rem 0 0;
+}
 
 /* line 5, ../sass/pages/_interests.sass */
 body {
@@ -154,13 +175,14 @@ section.carousel #left-control img {
 
 /* line 62, ../sass/pages/_interests.sass */
 section.gallery {
-  height: 1356px;
+  margin: 4rem auto 0;
+  overflow: hidden;
   padding: 5rem 0;
   position: relative;
   margin: 4rem auto 0;
   width: 960px;
 }
-/* line 68, ../sass/pages/_interests.sass */
+/* line 69, ../sass/pages/_interests.sass */
 section.gallery .book {
   -webkit-transition: border 0.5s;
   -moz-transition: border 0.5s;
@@ -172,7 +194,7 @@ section.gallery .book {
   position: relative;
   width: 300px;
 }
-/* line 75, ../sass/pages/_interests.sass */
+/* line 76, ../sass/pages/_interests.sass */
 section.gallery .book:hover {
   -webkit-transition: border 0.5s;
   -moz-transition: border 0.5s;
@@ -181,21 +203,23 @@ section.gallery .book:hover {
   border-right: 3px solid white;
   margin-bottom: 0;
 }
-/* line 79, ../sass/pages/_interests.sass */
+/* line 80, ../sass/pages/_interests.sass */
 section.gallery .book > img {
   height: 452px;
   position: absolute;
   width: 300px;
 }
 
-/* line 107, ../sass/pages/_interests.sass */
+/* line 108, ../sass/pages/_interests.sass */
 #the-dresden-files {
   height: 452px;
+  margin: 0;
   overflow: hidden;
+  padding: 0;
   position: relative;
   width: 300px;
 }
-/* line 112, ../sass/pages/_interests.sass */
+/* line 115, ../sass/pages/_interests.sass */
 #the-dresden-files img {
   -webkit-transition: right 0.5s, top 0.5s;
   -webkit-transition-delay: 0s, 0.5s;
@@ -209,11 +233,11 @@ section.gallery .book > img {
   width: auto;
 }
 
-/* line 121, ../sass/pages/_interests.sass */
+/* line 124, ../sass/pages/_interests.sass */
 #a-song-of-ice-and-fire img[data-book="1"] {
   opacity: 1;
 }
-/* line 123, ../sass/pages/_interests.sass */
+/* line 126, ../sass/pages/_interests.sass */
 #a-song-of-ice-and-fire img {
   -webkit-transition: opacity 1s;
   -moz-transition: opacity 1s;
@@ -222,7 +246,7 @@ section.gallery .book > img {
   opacity: 0;
 }
 
-/* line 127, ../sass/pages/_interests.sass */
+/* line 130, ../sass/pages/_interests.sass */
 section.map-box {
   height: 100%;
   margin: 8rem auto 0;
@@ -230,7 +254,7 @@ section.map-box {
   position: relative;
 }
 
-/* line 132, ../sass/pages/_interests.sass */
+/* line 135, ../sass/pages/_interests.sass */
 div.map-ui-container {
   height: 10%;
   margin: 0 auto;
@@ -238,27 +262,27 @@ div.map-ui-container {
   position: relative;
 }
 
-/* line 138, ../sass/pages/_interests.sass */
+/* line 141, ../sass/pages/_interests.sass */
 .map-filter {
   height: 100%;
   margin: 0 auto;
   position: relative;
   width: 60rem;
 }
-/* line 143, ../sass/pages/_interests.sass */
+/* line 146, ../sass/pages/_interests.sass */
 .map-filter a {
   display: block;
   font-size: 3rem;
   float: left;
   width: 20rem;
 }
-/* line 148, ../sass/pages/_interests.sass */
+/* line 151, ../sass/pages/_interests.sass */
 .map-filter .itinerary {
   background: white;
   margin-left: 7.5rem;
 }
 
-/* line 152, ../sass/pages/_interests.sass */
+/* line 155, ../sass/pages/_interests.sass */
 #map {
   height: 80%;
   margin: 0 auto;
@@ -266,17 +290,17 @@ div.map-ui-container {
   position: relative;
 }
 
-/* line 157, ../sass/pages/_interests.sass */
+/* line 160, ../sass/pages/_interests.sass */
 #new-york {
   background: green;
 }
 
-/* line 159, ../sass/pages/_interests.sass */
+/* line 162, ../sass/pages/_interests.sass */
 #miami {
   background: orange;
 }
 
-/* line 161, ../sass/pages/_interests.sass */
+/* line 164, ../sass/pages/_interests.sass */
 #san-fran {
   background: #a85353;
 }
@@ -575,7 +599,7 @@ button {
 
 /* line 38, ../sass/layout/_global.sass */
 .color-four {
-  color: red;
+  color: #845300;
 }
 
 /* line 41, ../sass/layout/_global.sass */
@@ -596,32 +620,33 @@ div.container {
 nav {
   background: linear-gradient(to right bottom, #161616, #222222);
   font-size: 1.5rem;
+  height: 3rem;
   padding: 1rem 0 0 1rem;
   position: fixed;
-  height: 3rem;
+  top: 0;
   width: 100%;
   z-index: 3;
 }
-/* line 59, ../sass/layout/_global.sass */
+/* line 60, ../sass/layout/_global.sass */
 nav h1, nav h2, nav ul {
   display: inline-block;
 }
-/* line 61, ../sass/layout/_global.sass */
+/* line 62, ../sass/layout/_global.sass */
 nav h1 {
   float: left;
   font-size: 2rem;
   margin-right: 2rem;
 }
-/* line 65, ../sass/layout/_global.sass */
+/* line 66, ../sass/layout/_global.sass */
 nav h2 {
   margin: 0 2rem;
 }
-/* line 67, ../sass/layout/_global.sass */
+/* line 68, ../sass/layout/_global.sass */
 nav ul.projects-menu {
   float: right;
   padding: 0 4rem;
 }
-/* line 70, ../sass/layout/_global.sass */
+/* line 71, ../sass/layout/_global.sass */
 nav ul.projects {
   -webkit-transition: all 0.1s;
   -moz-transition: all 0.1s;
@@ -635,7 +660,7 @@ nav ul.projects {
   top: 4rem;
   right: 1rem;
 }
-/* line 79, ../sass/layout/_global.sass */
+/* line 80, ../sass/layout/_global.sass */
 nav ul.projects:before {
   position: absolute;
   content: "";
@@ -649,35 +674,35 @@ nav ul.projects:before {
   right: 7rem;
 }
 
-/* line 91, ../sass/layout/_global.sass */
+/* line 92, ../sass/layout/_global.sass */
 ul.site-menu {
   display: block;
   float: left;
 }
-/* line 94, ../sass/layout/_global.sass */
+/* line 95, ../sass/layout/_global.sass */
 ul.site-menu .small-menu-item {
   display: none;
 }
-/* line 96, ../sass/layout/_global.sass */
+/* line 97, ../sass/layout/_global.sass */
 ul.site-menu a {
   color: white;
 }
-/* line 98, ../sass/layout/_global.sass */
+/* line 99, ../sass/layout/_global.sass */
 ul.site-menu li {
   display: inline-block;
 }
-/* line 100, ../sass/layout/_global.sass */
+/* line 101, ../sass/layout/_global.sass */
 ul.site-menu li:hover {
   border-bottom: 3px solid white;
 }
-/* line 102, ../sass/layout/_global.sass */
+/* line 103, ../sass/layout/_global.sass */
 ul.site-menu h2 {
   -webkit-transition: letter-spacing, 0.2s;
   -moz-transition: letter-spacing, 0.2s;
   -o-transition: letter-spacing, 0.2s;
   transition: letter-spacing, 0.2s;
 }
-/* line 104, ../sass/layout/_global.sass */
+/* line 105, ../sass/layout/_global.sass */
 ul.site-menu h2:hover {
   -webkit-transition: letter-spacing, 0.2s;
   -moz-transition: letter-spacing, 0.2s;
@@ -686,17 +711,17 @@ ul.site-menu h2:hover {
   letter-spacing: 1rem;
 }
 
-/* line 108, ../sass/layout/_global.sass */
+/* line 109, ../sass/layout/_global.sass */
 .projects-trigger {
   padding: 0.1rem;
 }
-/* line 111, ../sass/layout/_global.sass */
+/* line 112, ../sass/layout/_global.sass */
 .projects-trigger:hover ul.projects {
   height: auto;
   overflow: visible;
   padding: 1rem;
 }
-/* line 115, ../sass/layout/_global.sass */
+/* line 116, ../sass/layout/_global.sass */
 .projects-trigger:hover ul.projects:before {
   border-top: 1rem solid transparent;
   border-right: 1rem solid transparent;
