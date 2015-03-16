@@ -57,60 +57,6 @@ article.about-me p {
   text-align: justify;
 }
 
-/* line 1, ../sass/pages/_contact.sass */
-.contact {
-  padding: 4.5rem 0 0;
-  margin: 0 auto;
-  max-width: 60rem;
-}
-/* line 5, ../sass/pages/_contact.sass */
-.contact h2 {
-  font-size: 3rem;
-}
-/* line 7, ../sass/pages/_contact.sass */
-.contact h1 {
-  font-size: 2rem;
-}
-/* line 9, ../sass/pages/_contact.sass */
-.contact form {
-  background: #238e23;
-  padding: 1rem;
-  margin: 0 auto;
-  max-width: 60rem;
-}
-/* line 14, ../sass/pages/_contact.sass */
-.contact form label, .contact form input, .contact form textarea {
-  display: block;
-  margin: 0 0 2rem 3rem;
-}
-/* line 17, ../sass/pages/_contact.sass */
-.contact form textarea {
-  max-width: 31.8rem;
-}
-/* line 19, ../sass/pages/_contact.sass */
-.contact button[type="submit"] {
-  background: #ff9f00;
-  border: 0;
-  border-radius: 0;
-  color: white;
-  float: right;
-  margin: 1rem 0 0;
-  width: 10rem;
-}
-/* line 28, ../sass/pages/_contact.sass */
-.contact label {
-  color: white;
-  font-size: 2rem;
-}
-/* line 32, ../sass/pages/_contact.sass */
-.contact fieldset.captcha {
-  background: white;
-  display: block;
-  height: 14rem;
-  margin: 0 0 0 3rem;
-  max-width: 31.8rem;
-}
-
 /* line 5, ../sass/pages/_interests.sass */
 body {
   overflow: auto;
