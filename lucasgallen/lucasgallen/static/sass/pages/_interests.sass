@@ -6,70 +6,19 @@ body
   overflow: auto
 
 nav
-  z-index: 10
-
-section.carousel
-  display: none
-  height: 50%
-  position: relative
-  top: 4rem
-  width: 100%
-  ul
-    @include transition(left 0.2s)
-    display: block
-    height: 300px
-    left: 0
-    position: relative
-    width: 2520px
-  li
-    display: block
-    height: 300px
-    float: left
-    position: relative
-    margin-left: 1.5rem
-    width: 600px
-    img
-      display: block
-  div.carousel-container
-    height: 300px
-    margin: 0 auto
-    overflow: hidden
-    padding: 2rem 0
-    position: relative
-    width: 630px
-
-  .next-button
-    height: 300px
-    position: absolute
-    width: 3rem
-    z-index: 3
-    img
-      cursor: pointer
-      position: relative
-      top: 12rem
- 
-  #right-control
-    @include background-image(linear-gradient(left, transparent, #000))
-    right: 1.5rem
-    img
-      @include transform(rotate(0.5turn))
-      
-  #left-control
-    @include background-image(linear-gradient(right, transparent, #000))
-    left: 1.5rem
-    img
-      left: -2rem
+  top: 0
 
 section.gallery
-  margin: 4rem auto 0
-  overflow: hidden
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
   padding: 5rem 0
   position: relative
-  width: 900px
+  margin: 4rem auto 0
+  max-width: 960px
   .book
     border-right: 0 solid white
     height: 452px
-    float: left
     position: relative
     width: 300px
     > img
@@ -87,62 +36,3 @@ section.gallery
       &:hover
         @include transition(opacity 0.5s)
         opacity: 1
-
-#the-dresden-files
-  height: 452px
-  margin: 0
-  overflow: hidden
-  padding: 0
-  position: relative
-  width: 300px 
-  img
-    @include transition(right 0.5s, top 0.5s 0.5s)
-    height: auto
-    position: relative
-    top: -30px
-    right: 11px
-    width: auto
-
-#a-song-of-ice-and-fire
-  img[data-book="1"]
-    opacity: 1
-  img
-    @include transition(opacity 1s)
-    opacity: 0
-
-section.map-box
-  height: 100%
-  margin: 8rem auto 0
-  max-width: 100rem
-  position: relative
-div.map-ui-container
-  height: 10%
-  margin: 0 auto
-  max-width: 100rem
-  position: relative
-
-.map-filter
-  height: 100%
-  margin: 0 auto
-  position: relative
-  width: 60rem
-  a
-    display: block
-    font-size: 3rem
-    float: left
-    width: 20rem
-  .itinerary
-    background: white
-    margin-left: 7.5rem
-
-#map
-  height: 80%
-  margin: 0 auto
-  max-width: 100rem
-  position: relative
-#new-york
-  background: green
-#miami
-  background: orange
-#san-fran
-  background: rgb(168, 83, 83)
