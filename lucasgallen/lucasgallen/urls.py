@@ -9,17 +9,14 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = [
-    # Examples:
-    # url(r'^$', 'lucasgallen1.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
-
     url(r'^$', 'lucasgallen.views.home'),
     url(r'^home(?#about)/$', 'lucasgallen.views.home'),
     url(r'^contact/$', 'lucasgallen.views.contact'),
     url(r'^interests/$', 'lucasgallen.views.interest'),
     url(r'^gameoflife/$', 'lucasgallen.views.gameoflife'),
     url(r'^admin/', include(admin.site.urls)),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
 
 if settings.DEBUG:
     urlpatterns += staticfiles_urlpatterns()
