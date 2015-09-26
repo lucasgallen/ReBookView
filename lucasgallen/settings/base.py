@@ -1,4 +1,5 @@
 import os
+import dj_database_url
 from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS as TCP
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -7,6 +8,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'lucasgallen/templates')]
 
 STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
 )
 
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
@@ -23,9 +25,9 @@ TEMPLATE_CONTEXT_PROCESSORS = TCP + (
 SECRET_KEY = 'da-)x+6u-h8c#l(efh@v0m%9!_zf*pu(f98x7601!c5ndhic5u'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-TEMPLATE_DEBUG = True
+TEMPLATE_DEBUG = False
 
 ALLOWED_HOSTS = ['.herokuapp.com']
 
@@ -40,6 +42,9 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'psycopg2',
+
     'lucasgallen',
 )
 
@@ -56,15 +61,6 @@ ROOT_URLCONF = 'lucasgallen.urls'
 
 WSGI_APPLICATION = 'lucasgallen.wsgi.application'
 
-# Database
-# https://docs.djangoproject.com/en/1.6/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-     #   'ENGINE': 'django.db.backends.sqlite3',
-     #   'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
@@ -89,5 +85,7 @@ STATICFILES_FINDERS = (
 )
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'lucasgallen/lucasgallen/static')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'lucasgallen/media')
 
 STATIC_URL = '/lucasgallen/static/'
+MEDIA_URL = '/lucasgallen/media/'
