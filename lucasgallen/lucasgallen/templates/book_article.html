@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block page %}book-article{% endblock %}
+
+{% block main %}
+    <h1>{{ book.title }}</h1>
+    <h2>{{ book.author }}</h2>
+
+    <section class="articles">
+        {% for article in book_articles %}
+            <article>
+                <header>{{ article.headline }}</header>
+
+                {{ article.body|safe }}
+
+                <footer class="publish-date">{{ article.pub_date }}</footer>
+            </article>
+        {% endfor %}
+    </section>
+{% endblock %}
