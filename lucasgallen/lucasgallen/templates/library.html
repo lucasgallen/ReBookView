@@ -3,12 +3,12 @@
 {% block main %}
     <section class="gallery">
         {% for book in books %}
-            <div class="book">
+            <a class="book" href="/review/book/{{ book.title_slug }}">
                 <img src="{{ MEDIA_URL }}/{{ book.cover }}">
                 <div class="caption-overlay">
-                    <p>Caption</p>
+                    <p>{{ book.caption }}</p>
                 </div>
-            </div>
+            </a>
         {% endfor %}
     </section>
 {% endblock main %}

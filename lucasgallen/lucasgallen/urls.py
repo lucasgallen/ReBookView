@@ -12,7 +12,7 @@ urlpatterns = [
     url(r'^$', 'lucasgallen.views.home'),
     url(r'^home(?#about)/$', 'lucasgallen.views.home'),
     url(r'^contact/$', 'lucasgallen.views.contact'),
-    url(r'^interests/$', 'lucasgallen.views.interest'),
+    url(r'^library/$', 'lucasgallen.views.library'),
     url(r'^gameoflife/$', 'lucasgallen.views.gameoflife'),
     url(r'^admin/', include(admin.site.urls)),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

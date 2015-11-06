@@ -5,9 +5,17 @@ from lucasgallen.models import Book
 def home(request):
     return render(request, 'home.html')
 
-def interest(request):
-    books = list(Book.objects.all())
-    return render(request, 'interests.html', { 'books': books, })
+def library(request):
+    books = []
+
+    for book in Book.objects.all():
+        books.append({
+                'cover': book.cover,
+                'caption': book.caption,
+                'title_slug': book.title_slug,
+            })
+
+    return render(request, 'library.html', { 'books': books, })
 
 def gameoflife(request):
     return render(request, 'gameoflife.html')
