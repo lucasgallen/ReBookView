@@ -44,6 +44,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 
     'psycopg2',
+    'tinymce',
 
     'lucasgallen',
 )

@@ -2,6 +2,8 @@ import os
 from django.db import models
 from django.utils import text
 
+from tinymce import models as tinymce_models
+
 
 def book_storage(instance, filename):
     author_slug_name = text.slugify(instance.author)
