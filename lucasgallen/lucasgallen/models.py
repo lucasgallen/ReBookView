@@ -12,12 +12,22 @@ def book_storage(instance, filename):
         )
 
 class Book(models.Model):
-    title = models.CharField(max_length=140)
-    title_slug = models.SlugField(max_length=140,unique=True,null=True)
     author = models.CharField(max_length=70)
-    cover = models.ImageField(max_length=100, upload_to=book_storage)
     caption = models.CharField(max_length=140)
+    cover = models.ImageField(max_length=100, upload_to=book_storage)
+    series = models.CharField(max_length=100, null=True, blank=True)
+    title = models.CharField(max_length=140)
+    title_slug = models.SlugField(max_length=140,unique=True, null=True)
 
     def __str__(self):
         return self.title
 
+
+class BookArticle(models.Model):
+    body = tinymce_models.HTMLField()
+    headline = models.CharField(max_length=120)
+    pub_date = models.DateField(auto_now_add=True)
+    book = models.ForeignKey(Book, related_name="Articles")
+
+    def __str__(self):
+        return self.headline
