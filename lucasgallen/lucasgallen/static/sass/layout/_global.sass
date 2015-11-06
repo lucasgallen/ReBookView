@@ -48,6 +48,21 @@ div.container
   max-width: 97rem 
   padding: 20% 5rem 0
 
+#overlay.contact
+  background: rgba(0, 0, 0, .7)
+  display: none
+  height: 100%
+  position: fixed
+  top: 0
+  width: 100%
+  z-index: 3
+  &.active
+    display: block
+  .contact-information
+    margin: 0 auto
+    max-width: 25rem
+    padding: 8rem 0 0
+
 nav
   background: linear-gradient( to right bottom, rgba(22,22,22,1), #222)
   font-size: 1.5rem
@@ -57,6 +72,8 @@ nav
   top: 0
   width: 100%
   z-index: 3
+  #contact-trigger
+    cursor: pointer
   h1,h2,ul
     display: inline-block
   h1

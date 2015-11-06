@@ -16,7 +16,7 @@
 <body class="{% block page %}{% endblock page %}">
     <nav>
         <h1 class="name">
-            <span class="color-one">l</span> <span class="color-two">u</span> <span class="color-three">c</span> <span class="color-two">a</span> <span class="color-one">s</span>  {<span class="color-four">G</span>} <span class="color-three">a</span> <span class="color-two">l</span> <span class="color-two">l</span> <span class="color-one">e</span> <span class="color-three">n</span>
+            <span class="color-one">l</span> <span class="color-two">u</span> <span class="color-three">c</span> <span class="color-two">a</span> <span class="color-one">s</span>  <a id="contact-trigger">{<span class="color-four">G</span>}</a> <span class="color-three">a</span> <span class="color-two">l</span> <span class="color-two">l</span> <span class="color-one">e</span> <span class="color-three">n</span>
         </h1>
 
         <a id="small-menu-toggle" class="small-menu-toggle">&#9776;</a>
@@ -48,6 +48,13 @@
 
     {% block script %}
     {% endblock script %}
-    
+
+     <div id="overlay" class="contact">
+        <a id="overlay-close">close</a>
+        <section class="contact-information">
+            <h1>Lucas Allen</h1>
+            <h2>lucas.g.allen@gmail.com</h2>
+        </section>
+     </div>
 </body>
 </html>
