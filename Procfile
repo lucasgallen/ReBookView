@@ -1,1 +1,1 @@
-web: gunicorn lucasgallen.wsgi --log-file -
+web: gunicorn lucasgallen.lucasgallen.wsgi --log-file -
