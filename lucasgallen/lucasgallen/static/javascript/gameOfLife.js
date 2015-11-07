@@ -1,10 +1,10 @@
-(function(angular) {    
+(function(angular) {
     var app = angular.module('lifeApp', []);
-    
-    
+
+
     // Controller for the Game of Life app
     app.controller("Life", function($scope, $timeout) {
-    
+
         // Constructor for the cell object
         // represented by each gray square div
         function Cell(isAlive,numNghb) {
@@ -13,15 +13,15 @@
             //this.lifeClass = 'dead-cell';
             this.lifeClass = this.isAlive ? 'living-cell':'dead-cell';
         }
-    
-    
+
+
         // Neccessary to initiate 2D array
         // for our grid of cells
-        function createCells(rows) {            
+        function createCells(rows) {
             var arr = [];
             for (i=0;i<rows;i++)
                 arr[i] = [];
-    
+
             return arr;
         }
 
@@ -30,33 +30,33 @@
         // if neccessary
         $scope.numRows = 51;
         $scope.numColumns = 59;
-    
+
         // Initializer for the 2D array
         // of cells
         $scope.cells = createCells($scope.numRows);
-    
+
         // To be used in preserving current
         // generation of cells
-        var nextGen = createCells($scope.numRows);      
-                                            
-    
-        // This is the initializer                                  
+        var nextGen = createCells($scope.numRows);
+
+
+        // This is the initializer
         // for the current generation of cells
-        for (i=0;i<$scope.numRows;i++)                          
-            for (j=0;j<$scope.numColumns;j++)                        
+        for (i=0;i<$scope.numRows;i++)
+            for (j=0;j<$scope.numColumns;j++)
                 $scope.cells[i][j] = new Cell(false,0);
-    
+
         // This is the initializer
         // for the next generation of cells
-        for (i=0;i<$scope.numRows;i++)                          
-            for (j=0;j<$scope.numColumns;j++)                        
+        for (i=0;i<$scope.numRows;i++)
+            for (j=0;j<$scope.numColumns;j++)
                 nextGen[i][j] = new Cell(false,0);
-    
-    
-        $scope.playSimulation = function () {  
+
+
+        $scope.playSimulation = function () {
             // Here the function goes through each cell
             // and checks that cell's neighbors (diagonals inclusive)
-            // Note how if the check is asking for a cell out 
+            // Note how if the check is asking for a cell out
             // of bounds, it checks the cell on the opposite wall
             for (i=0;i<$scope.numRows;i++) {
                 for (j=0;j<$scope.numColumns;j++) {
