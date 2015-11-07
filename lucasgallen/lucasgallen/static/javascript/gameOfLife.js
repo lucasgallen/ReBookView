@@ -65,7 +65,7 @@
         }
 
 
-        $scope.playSimulation = function () {
+        $scope.playSimulation = function() {
             // Here the function goes through each cell
             // and checks that cell's neighbors (diagonals inclusive)
             // Note how if the check is asking for a cell out
@@ -211,7 +211,7 @@
             // Updating after the neighbor count prevents the function
             // from losing the data on the current generation
             for (i=0;i<$scope.numRows;i++) {
-                for(j=0;j<$scope.numColumns;j++) {
+                for (j=0;j<$scope.numColumns;j++) {
                     $scope.cells[i][j].isAlive = nextGen[i][j].isAlive;
                     $scope.cells[i][j].lifeClass = nextGen[i][j].lifeClass;
                 }
@@ -247,8 +247,8 @@
     })
 
 
-    app.directive('change', function () {
-        return function (element,scope,attrs) {
+    app.directive('change', function() {
+        return function(element,scope,attrs) {
             element.bind(true, function() {
                 $scope.numRows=attrs.change;
             })
