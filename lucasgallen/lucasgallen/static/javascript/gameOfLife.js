@@ -53,6 +53,18 @@
                 nextGen[i][j] = new Cell(false,0);
 
 
+        // Start with a random set of living cells
+        for (i=0;i<$scope.numRows;i++) {
+            for (j=0;j<$scope.numColumns;j++) {
+                if (Math.random()>=0.5) {
+                    $scope.cells[i][j].isAlive = true;
+                } else {
+                    $scope.cells[i][j].isAlive = false;
+                }
+            }
+        }
+
+
         $scope.playSimulation = function () {
             // Here the function goes through each cell
             // and checks that cell's neighbors (diagonals inclusive)
@@ -206,12 +218,6 @@
             }
         }
 
-        // Bound to the "step forward" button
-        // and makes a single call to our simulation
-        $scope.lifeStep = function () {
-            $scope.playSimulation();
-        }
-
         var stop;
         $scope.play = false;
 
@@ -236,18 +242,6 @@
         $scope.playLifeButton = function() {
             $scope.play = !$scope.play;
             $scope.playLife();
-        }
-
-        $scope.randomize = function() {
-            for (i=0;i<$scope.numRows;i++) {
-                for (j=0;j<$scope.numColumns;j++) {
-                    if (Math.random()>=0.5) {
-                        $scope.cells[i][j].isAlive = true;
-                    } else {
-                        $scope.cells[i][j].isAlive = false;
-                    }
-                }
-            }
         }
 
     })

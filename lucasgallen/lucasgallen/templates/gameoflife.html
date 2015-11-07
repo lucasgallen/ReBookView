@@ -6,9 +6,7 @@
             <div class="fence" ng-model="cells">
                 <span ng-repeat="row in cells">
                     <span ng-repeat="cell in row">
-                        <div
-                        ng-class="cell.lifeClass">
-                        </div>
+                        <div ng-class="cell.lifeClass"></div>
                     </span>
                 </span>
             </div><!--/.fence -->
@@ -18,23 +16,11 @@
 
         <section class="game-overview">
             <div class="container">
-                <aside class="how-to-play left-aside">
-                    <h1>Tips</h1>
+                <aside class="how-to-play">
                     <p>
                         Pressing the play button below lets the game run continuously; pressing it again pauses the simulation.
                     </p>
                     <button id="pause" ng-click="playLifeButton()">play/pause</button>
-                </aside>
-
-                <aside class="how-to-play right-aside">
-                    <h1>More</h1>
-                    <p>
-                        The black squares designate dead cells and green squares designate living cells.
-                    </p>
-                    <p>
-                        The button below will "shuffle" the cells in the sense that a random subset of the cells will be selected to become alive.
-                    </p>
-                    <button id="shuffle" ng-click="randomize()">shuffle</button>
                 </aside>
             </div>
         </section>
