@@ -4,7 +4,7 @@
     <section class="gallery">
         {% for book in books %}
             <a class="book" href="/review/book/{{ book.title_slug }}">
-                <img src="{{ MEDIA_URL }}/{{ book.cover }}">
+                <img src="{{ MEDIA_URL }}{{ book.cover }}">
                 <div class="caption-overlay">
                     <p>{{ book.caption }}</p>
                 </div>
