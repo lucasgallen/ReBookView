@@ -6,6 +6,7 @@
 ################
 ## Django Project
 ################
+lucasgallen/settings/local.py
 *.py[co]
 
 #################
