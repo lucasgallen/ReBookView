@@ -459,26 +459,45 @@ div.container {
 
 /* line 55, ../sass/layout/_global.sass */
 #overlay.contact {
+  -webkit-transition: opacity 0.8s, height 0.5s;
+  -moz-transition: opacity 0.8s, height 0.5s;
+  -o-transition: opacity 0.8s, height 0.5s;
+  transition: opacity 0.8s, height 0.5s;
   background: rgba(0, 0, 0, 0.7);
-  display: none;
-  height: 100%;
+  height: 0;
+  opacity: 0;
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 0;
+}
+/* line 64, ../sass/layout/_global.sass */
+#overlay.contact.active {
+  -webkit-transition: opacity 0.8s, height 0.5s;
+  -moz-transition: opacity 0.8s, height 0.5s;
+  -o-transition: opacity 0.8s, height 0.5s;
+  transition: opacity 0.8s, height 0.5s;
+  height: 100%;
+  opacity: 1;
+  width: 100%;
   z-index: 3;
 }
-/* line 63, ../sass/layout/_global.sass */
-#overlay.contact.active {
-  display: block;
-}
-/* line 65, ../sass/layout/_global.sass */
+/* line 70, ../sass/layout/_global.sass */
 #overlay.contact .contact-information {
+  background-color: #c38a22;
+  border-radius: 0.5rem;
   margin: 0 auto;
   max-width: 25rem;
-  padding: 8rem 0 0;
+  padding: 1rem;
+  position: relative;
+  top: 40%;
+}
+/* line 78, ../sass/layout/_global.sass */
+#overlay.contact .contact-information h1, #overlay.contact .contact-information h2 {
+  color: #302505;
 }
 
-/* line 70, ../sass/layout/_global.sass */
+/* line 81, ../sass/layout/_global.sass */
 nav {
   background: linear-gradient(to right bottom, #161616, #222222);
   font-size: 1.5rem;
@@ -489,30 +508,30 @@ nav {
   width: 100%;
   z-index: 3;
 }
-/* line 79, ../sass/layout/_global.sass */
+/* line 90, ../sass/layout/_global.sass */
 nav #contact-trigger {
   cursor: pointer;
 }
-/* line 81, ../sass/layout/_global.sass */
+/* line 92, ../sass/layout/_global.sass */
 nav h1, nav h2, nav ul {
   display: inline-block;
 }
-/* line 83, ../sass/layout/_global.sass */
+/* line 94, ../sass/layout/_global.sass */
 nav h1 {
   float: left;
   font-size: 2rem;
   margin-right: 2rem;
 }
-/* line 87, ../sass/layout/_global.sass */
+/* line 98, ../sass/layout/_global.sass */
 nav h2 {
   margin: 0 2rem;
 }
-/* line 89, ../sass/layout/_global.sass */
+/* line 100, ../sass/layout/_global.sass */
 nav ul.projects-menu {
   float: right;
   padding: 0 4rem;
 }
-/* line 92, ../sass/layout/_global.sass */
+/* line 103, ../sass/layout/_global.sass */
 nav ul.projects {
   -webkit-transition: all 0.1s;
   -moz-transition: all 0.1s;
@@ -526,7 +545,7 @@ nav ul.projects {
   top: 4rem;
   right: 1rem;
 }
-/* line 101, ../sass/layout/_global.sass */
+/* line 112, ../sass/layout/_global.sass */
 nav ul.projects:before {
   position: absolute;
   content: "";
@@ -540,35 +559,35 @@ nav ul.projects:before {
   right: 7rem;
 }
 
-/* line 113, ../sass/layout/_global.sass */
+/* line 124, ../sass/layout/_global.sass */
 ul.site-menu {
   display: block;
   float: left;
 }
-/* line 116, ../sass/layout/_global.sass */
+/* line 127, ../sass/layout/_global.sass */
 ul.site-menu .small-menu-item {
   display: none;
 }
-/* line 118, ../sass/layout/_global.sass */
+/* line 129, ../sass/layout/_global.sass */
 ul.site-menu a {
   color: white;
 }
-/* line 120, ../sass/layout/_global.sass */
+/* line 131, ../sass/layout/_global.sass */
 ul.site-menu li {
   display: inline-block;
 }
-/* line 122, ../sass/layout/_global.sass */
+/* line 133, ../sass/layout/_global.sass */
 ul.site-menu li:hover {
   border-bottom: 3px solid white;
 }
-/* line 124, ../sass/layout/_global.sass */
+/* line 135, ../sass/layout/_global.sass */
 ul.site-menu h2 {
   -webkit-transition: letter-spacing, 0.2s;
   -moz-transition: letter-spacing, 0.2s;
   -o-transition: letter-spacing, 0.2s;
   transition: letter-spacing, 0.2s;
 }
-/* line 126, ../sass/layout/_global.sass */
+/* line 137, ../sass/layout/_global.sass */
 ul.site-menu h2:hover {
   -webkit-transition: letter-spacing, 0.2s;
   -moz-transition: letter-spacing, 0.2s;
@@ -577,17 +596,17 @@ ul.site-menu h2:hover {
   letter-spacing: 1rem;
 }
 
-/* line 130, ../sass/layout/_global.sass */
+/* line 141, ../sass/layout/_global.sass */
 .projects-trigger {
   padding: 0.1rem;
 }
-/* line 133, ../sass/layout/_global.sass */
+/* line 144, ../sass/layout/_global.sass */
 .projects-trigger:hover ul.projects {
   height: auto;
   overflow: visible;
   padding: 1rem;
 }
-/* line 137, ../sass/layout/_global.sass */
+/* line 148, ../sass/layout/_global.sass */
 .projects-trigger:hover ul.projects:before {
   border-top: 1rem solid transparent;
   border-right: 1rem solid transparent;

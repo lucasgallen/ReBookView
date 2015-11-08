@@ -53,19 +53,29 @@ div.container
   padding: 20% 5rem 0
 
 #overlay.contact
+  @include transition(opacity 0.8s, height 0.5s)
   background: rgba(0, 0, 0, .7)
-  display: none
-  height: 100%
+  height: 0
+  opacity: 0
   position: fixed
   top: 0
   width: 100%
-  z-index: 3
+  z-index: 0
   &.active
-    display: block
+    @include transition(opacity 0.8s, height 0.5s)
+    height: 100%
+    opacity: 1
+    z-index: 3
   .contact-information
+    background-color: #c38a22
+    border-radius: 0.5rem
     margin: 0 auto
     max-width: 25rem
-    padding: 8rem 0 0
+    padding: 1rem
+    position: relative
+    top: 40%
+    h1, h2
+      color: #302505
 
 nav
   background: linear-gradient( to right bottom, rgba(22,22,22,1), #222)
