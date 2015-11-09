@@ -6,7 +6,6 @@
     continueTop = continueTop + parseInt($navDisplacement, 10);
 
     $('#continue').on('click', function() {
-        console.log(continueTop);
         $body.animate({
             scrollTop: continueTop + 'px'
         });
