@@ -9,6 +9,14 @@
         }
     });
 
+    document.addEventListener('touchend', function(e) {
+        if (e.target.id === 'overlay') {
+            e.preventDefault();
+            $('.contact.active').click();
+            e.stopPropagation();
+        }
+    });
+
     $('#small-menu-toggle').on('click', function() {
         var $siteMenu = $('.site-menu');
 
