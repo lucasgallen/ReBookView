@@ -1,7 +1,8 @@
 from django.contrib import admin
-from django.forms import Textarea
+from django.forms import Textarea, CharField, ModelForm
 from django.db import models
 from lucasgallen.models import Book, BookArticle
+from ckeditor.widgets import CKEditorWidget
 
 class BookAdmin(admin.ModelAdmin):
     formfield_overrides = {
@@ -9,8 +10,15 @@ class BookAdmin(admin.ModelAdmin):
     }
     prepopulated_fields = { 'title_slug': ('title',) }
 
+class BookArticleAdminForm(ModelForm):
+    body = CharField(widget=CKEditorWidget())
+
+    class Meta:
+        model = BookArticle
+        fields = '__all__'
+
 class BookArticleAdmin(admin.ModelAdmin):
-    pass
+    form = BookArticleAdminForm
 
 admin.site.register(Book, BookAdmin)
 admin.site.register(BookArticle, BookArticleAdmin)

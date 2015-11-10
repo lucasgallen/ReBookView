@@ -1,8 +1,7 @@
 import os
 from django.db import models
 from django.utils import text
-
-from tinymce import models as tinymce_models
+from ckeditor.fields import RichTextField
 
 
 def book_storage(instance, filename):
@@ -24,7 +23,7 @@ class Book(models.Model):
 
 
 class BookArticle(models.Model):
-    body = tinymce_models.HTMLField()
+    body = RichTextField()
     headline = models.CharField(max_length=120)
     pub_date = models.DateField(auto_now_add=True)
     book = models.ForeignKey(Book, related_name="Articles")
