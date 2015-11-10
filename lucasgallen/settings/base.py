@@ -43,7 +43,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 
     'psycopg2',
-    'tinymce',
+    'ckeditor',
 
     'lucasgallen',
 )
@@ -61,6 +61,8 @@ ROOT_URLCONF = 'lucasgallen.urls'
 
 WSGI_APPLICATION = 'lucasgallen.wsgi.application'
 
+# CKEditor needs jQuery:
+CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
