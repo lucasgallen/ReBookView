@@ -14,7 +14,6 @@ urlpatterns = [
     url(r'^contact/$', 'lucasgallen.views.contact'),
     url(r'^library/$', 'lucasgallen.views.library'),
     url(r'^review/book/(?P<name>[\w-]+)/$', 'lucasgallen.views.book_article'),
-    url(r'^gameoflife/$', 'lucasgallen.views.gameoflife'),
     url(r'^admin/', include(admin.site.urls)),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

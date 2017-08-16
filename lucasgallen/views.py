@@ -30,8 +30,5 @@ def book_article(request, name):
 
     return render(request, 'book_article.html', { 'book': book, 'book_articles': book_articles, })
 
-def gameoflife(request):
-    return render(request, 'gameoflife.html')
-
 def contact(request):
     return render(request, 'contact.html')
