@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Lucas' Portfolio</title>
+    <title>ReBookView</title>
     <meta name="viewport" content="width=device-width">
 
     <link rel="shortcut icon" href="{{ STATIC_URL }}/images/favicon.ico">
@@ -12,19 +12,6 @@
 </head>
 
 <body class="{% block page %}{% endblock page %}">
-    <nav>
-        <h1 class="name">
-            <span class="color-one">l</span> <span class="color-two">u</span> <span class="color-three">c</span> <span class="color-two">a</span> <span class="color-one">s</span>  <a id="contact-trigger">{<span class="color-four">G</span>}</a> <span class="color-three">a</span> <span class="color-two">l</span> <span class="color-two">l</span> <span class="color-one">e</span> <span class="color-three">n</span>
-        </h1>
-
-        <a id="small-menu-toggle" class="small-menu-toggle">&#9776;</a>
-
-        <ul class="site-menu">
-            <li> <h2><a href="/home">home</a></h2> </li>
-            <li> <h2><a href="/library">library</a></h2> </li>
-        </ul>
-    </nav>
-
     {% block main %}
     {% endblock main %}
 
