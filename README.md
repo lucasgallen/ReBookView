@@ -1,5 +1,3 @@
-mywebsite
-=========
-I'm now moving on to greener pastures! Currently I'm developing my skills in backend web development and as a part of that process, I've restructured my site using Django.
+# ReBookView
 
-Following these changes should be more features to the site.
+Formerly this was to be some kind of portfolio site, but really it stopped at simply being a place for book reviews. Since I'm working on other projects -- other *separate* projects with their very own repository -- I will be making some changes to the site and hopefully get it properly set up.
