@@ -11,7 +11,6 @@ admin.autodiscover()
 urlpatterns = [
     url(r'^$', 'lucasgallen.views.home'),
     url(r'^home(?#about)/$', 'lucasgallen.views.home'),
-    url(r'^contact/$', 'lucasgallen.views.contact'),
     url(r'^library/$', 'lucasgallen.views.library'),
     url(r'^review/book/(?P<name>[\w-]+)/$', 'lucasgallen.views.book_article'),
     url(r'^admin/', include(admin.site.urls)),
