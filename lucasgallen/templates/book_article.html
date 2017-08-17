@@ -3,10 +3,10 @@
 {% block page %}book-article{% endblock %}
 
 {% block main %}
-    <h1>{{ book.title }}</h1>
-    <h2>{{ book.author }}</h2>
-
     <section class="articles">
+        <h1>{{ book.title }}</h1>
+        <h2>{{ book.author }}</h2>
+
         {% for article in book_articles %}
             <article>
                 <header>{{ article.headline }}</header>
