@@ -1,19 +1,20 @@
 {% extends "base.html" %}
 
-{% block page %}book-article{% endblock %}
+{% block page %}book-review-page{% endblock %}
 
 {% block main %}
     <section class="articles">
-        <h1>{{ book.title }}</h1>
-        <h2>{{ book.author }}</h2>
+        <h1 class="book-title">{{ book.title }}</h1>
+        <h2 class="book-author">{{ book.author }}</h2>
 
         {% for article in book_articles %}
-            <article>
-                <header>{{ article.headline }}</header>
+            <article class="book-review-page-article">
+                <header class="book-review-page-article-header">
+                    <h2 class="book-review-page-article-title">{{ article.headline }}</h2>
+                    <p class="publish-date"><time>{{ article.pub_date }}</time></p>
+                </header>
 
                 {{ article.body|safe }}
-
-                <footer class="publish-date">{{ article.pub_date }}</footer>
             </article>
         {% endfor %}
     </section>
