@@ -1,4 +1,6 @@
 (function($) {
+    var $backLink = $('#back-link');
+
     $('#contact-trigger').on('click', function() {
         $('#overlay').toggleClass('active');
     });
@@ -33,4 +35,11 @@
         }
     });
 
+    if ($backLink.is(':visible')) {
+        console.log('hello');
+        $backLink.on('click', function(e) {
+            window.history.back();
+            e.preventDefault();
+        });
+    }
 }(jQuery))
