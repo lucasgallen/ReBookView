@@ -36,7 +36,6 @@
     });
 
     if ($backLink.is(':visible')) {
-        console.log('hello');
         $backLink.on('click', function(e) {
             window.history.back();
             e.preventDefault();
